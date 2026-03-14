@@ -13,10 +13,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Logo
 
-Place your **logo.png** (golden lotus + Buddha) in the `public` folder. The site currently uses a placeholder `public/logo.svg`. To use your PNG:
-
-1. Add `public/logo.png`.
-2. In `components/Navbar.tsx`, `components/Hero.tsx`, and `components/Footer.tsx`, change `src="/logo.svg"` to `src="/logo.png"`.
+The site uses **logo.png** from the `public` folder (golden lotus + Buddha). If your repo has a folder named `Public` (capital P), rename it to `public` so Next.js serves static files on all platforms. A placeholder `logo.svg` is also included; you can remove it if using only PNG.
 
 ## Build & deploy
 

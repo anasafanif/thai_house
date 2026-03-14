@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Link href="#hero" className="inline-flex items-center gap-2 mb-4">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Thai House Massage & Spa"
                 width={40}
                 height={40}

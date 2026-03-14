@@ -33,7 +33,7 @@ export default function Hero() {
             className="mb-8"
           >
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Thai House Massage & Spa"
               width={120}
               height={120}

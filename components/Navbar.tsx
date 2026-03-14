@@ -40,7 +40,7 @@ export default function Navbar() {
           aria-label="Thai House Massage & Spa - Home"
         >
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="Thai House Massage & Spa"
             width={48}
             height={48}
