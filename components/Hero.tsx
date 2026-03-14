@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { LotusMotif, LotusMotifSmall } from "@/components/ThaiPatterns";
-import FloatingLogo from "@/components/FloatingLogo";
+import { FloatingLogo } from "@/components/FloatingLogo";
 import ShimmerButton from "@/components/ShimmerButton";
 
 export default function Hero() {
