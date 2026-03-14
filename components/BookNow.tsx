@@ -43,7 +43,7 @@ export default function BookNow() {
   return (
     <section
       id="book-now"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream"
     >
       <div className="max-w-7xl mx-auto">
         <motion.h2
@@ -51,10 +51,11 @@ export default function BookNow() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-4"
+          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2"
         >
           Book Now
         </motion.h2>
+        <div className="h-0.5 w-20 bg-gold/70 rounded-full mb-4" aria-hidden />
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

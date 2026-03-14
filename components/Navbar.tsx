@@ -32,7 +32,7 @@ export default function Navbar() {
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-cream/95 backdrop-blur-sm border-b border-gold/20 shadow-soft shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
+          ? "bg-cream-dark/90 backdrop-blur-md border-b border-gold/25 shadow-soft"
           : "bg-transparent"
       }`}
     >

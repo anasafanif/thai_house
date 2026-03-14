@@ -7,7 +7,7 @@ export default function AboutUs() {
   return (
     <section
       id="about"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark/50"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
@@ -39,7 +39,7 @@ export default function AboutUs() {
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
                 About Us
               </h2>
-              <div className="h-0.5 w-16 bg-sage/50 rounded-full" aria-hidden />
+              <div className="h-0.5 w-20 bg-gold/70 rounded-full" aria-hidden />
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 16 }}

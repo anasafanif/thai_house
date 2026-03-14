@@ -15,13 +15,15 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none z-0"
         aria-hidden
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream to-gold/5" />
-        {/* Stronger lotus background: repeated subtle lotus silhouettes */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-[0.04]">
+        {/* Less bright: warmer, deeper cream with subtle gold/sage */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cream-dark via-cream to-cream-warm" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/[0.02] to-transparent" />
+        {/* More visible lotus background */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]">
           <LotusMotif className="w-[min(60vw,500px)] h-[min(60vw,500px)] text-gold-dark" />
         </div>
         <svg
-          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.06]"
+          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.1]"
           viewBox="0 0 200 200"
           fill="currentColor"
           aria-hidden
@@ -78,18 +80,18 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 24, delay: 0.3 }}
-            className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-cream to-gold/10 border border-gold/20 relative overflow-hidden"
+            className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-cream-dark to-gold/15 border border-gold/30 shadow-softGold relative overflow-hidden"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <LotusMotif
-                className="w-[70%] h-[70%] text-gold"
-                opacity="0.12"
+                className="w-[70%] h-[70%] text-gold-dark"
+                opacity="0.2"
               />
             </div>
             <div className="absolute bottom-4 right-4">
               <LotusMotifSmall
                 className="w-20 h-20 text-gold-dark"
-                opacity="0.15"
+                opacity="0.25"
               />
             </div>
           </motion.div>

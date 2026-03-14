@@ -52,7 +52,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -65,7 +65,7 @@ export default function Services() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
             Our Services
           </h2>
-          <div className="h-0.5 w-16 bg-gold/60 rounded-full" aria-hidden />
+          <div className="h-0.5 w-20 bg-gold-dark/80 rounded-full" aria-hidden />
         </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -90,7 +90,7 @@ export default function Services() {
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               className="group"
             >
-              <div className="p-6 md:p-8 rounded-2xl border border-charcoal/10 bg-cream hover:border-gold/30 hover:border-l-2 hover:border-l-gold/50 hover:shadow-softGold transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
+              <div className="p-6 md:p-8 rounded-2xl border border-charcoal/10 bg-cream-warm hover:border-gold/40 hover:border-l-4 hover:border-l-gold-dark hover:shadow-softGold transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
                 <span className="text-gold-dark font-medium text-sm mb-2">
                   {String(index + 1).padStart(2, "0")}
                 </span>

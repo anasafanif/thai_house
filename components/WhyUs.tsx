@@ -22,7 +22,7 @@ export default function WhyUs() {
   return (
     <section
       id="why-us"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark/50"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -39,7 +39,7 @@ export default function WhyUs() {
             <p className="text-sage font-medium text-lg mb-2">
               Where two traditions meet
             </p>
-            <div className="mb-6 text-sage/20 w-24">
+            <div className="mb-6 text-gold-dark/40 w-24">
               <ThaiBorderLine className="w-full h-2" />
             </div>
             <p className="text-base md:text-lg text-charcoal/85 leading-relaxed max-w-[55ch]">

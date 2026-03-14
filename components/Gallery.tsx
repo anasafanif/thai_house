@@ -16,7 +16,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -29,7 +29,7 @@ export default function Gallery() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
             Gallery
           </h2>
-          <div className="h-0.5 w-16 bg-sage/50 rounded-full mb-4" aria-hidden />
+          <div className="h-0.5 w-20 bg-gold/70 rounded-full mb-4" aria-hidden />
           <p className="text-sage/90 max-w-[55ch]">
             A glimpse into our sanctuary.
           </p>

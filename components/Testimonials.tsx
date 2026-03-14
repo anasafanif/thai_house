@@ -43,7 +43,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark/50"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark"
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -56,7 +56,7 @@ export default function Testimonials() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
             Testimonials
           </h2>
-          <div className="h-0.5 w-16 bg-gold/60 rounded-full mb-4" aria-hidden />
+          <div className="h-0.5 w-20 bg-gold-dark/80 rounded-full mb-4" aria-hidden />
           <p className="text-sage/90 max-w-[55ch]">
             What our guests say about us.
           </p>
@@ -71,7 +71,7 @@ export default function Testimonials() {
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               className="absolute inset-0"
             >
-              <blockquote className="bg-cream border border-charcoal/10 rounded-2xl p-8 md:p-10 shadow-soft">
+              <blockquote className="bg-cream border border-gold/20 rounded-2xl p-8 md:p-10 shadow-soft">
                 <p className="font-serif text-xl md:text-2xl text-charcoal leading-relaxed mb-8">
                   &ldquo;{TESTIMONIALS[index].quote}&rdquo;
                 </p>

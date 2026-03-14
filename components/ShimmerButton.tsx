@@ -14,7 +14,7 @@ type ShimmerButtonProps = {
 };
 
 const shimmerBg =
-  "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)";
+  "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%)";
 
 const ShimmerButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, ShimmerButtonProps>(
   function ShimmerButton(
@@ -22,13 +22,13 @@ const ShimmerButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, ShimmerB
     ref
   ) {
     const base =
-      "inline-block px-8 py-3.5 font-medium bg-gold text-charcoal rounded-md hover:bg-gold-dark transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 active:scale-[0.98] hover:shadow-softGoldHover relative overflow-hidden";
+      "inline-block px-8 py-3.5 font-medium bg-gold-dark text-cream rounded-md hover:bg-charcoal transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 active:scale-[0.98] shadow-softGold hover:shadow-softGoldHover relative overflow-hidden";
     const content = (
       <span className="relative z-10">{children}</span>
     );
     const shimmerLayer = (
       <span
-        className="absolute inset-0 z-0 bg-no-repeat opacity-60 bg-[length:200%_100%] animate-shimmer"
+        className="absolute inset-0 z-0 bg-no-repeat opacity-80 bg-[length:200%_100%] animate-shimmer"
         style={{ backgroundImage: shimmerBg }}
         aria-hidden
       />

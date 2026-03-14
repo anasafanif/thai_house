@@ -9,18 +9,22 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
-          DEFAULT: "#D4AF77",
-          dark: "#B8975C",
+          DEFAULT: "#c9a227",
+          dark: "#a8841f",
+          light: "#e0c04a",
         },
         cream: {
-          DEFAULT: "#FBF9F6",
-          dark: "#F5F0E8",
+          DEFAULT: "#f5f0e8",
+          dark: "#ebe4d9",
+          warm: "#efe9e0",
         },
         sage: {
           DEFAULT: "#5C6B5C",
           light: "#7A8A7A",
+          muted: "#4a554a",
         },
         charcoal: "#2C2C2C",
+        "charcoal-soft": "#3d3d3d",
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
