@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #d4af77;
+  --gold-dark: #b8975c;
+  --cream: #fbf9f6;
+  --cream-dark: #f5f0e8;
+  --sage: #5c6b5c;
+  --charcoal: #2c2c2c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-charcoal antialiased;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

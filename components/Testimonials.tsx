@@ -1,0 +1,140 @@
+"use client";
+
+import { useState, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
+const TESTIMONIALS = [
+  {
+    quote:
+      "The best massage experience I have had in Morocco. The fusion of Thai technique and the calm of the space left me completely renewed.",
+    name: "Laila Benali",
+    role: "Casablanca",
+  },
+  {
+    quote:
+      "I come every month. The herbal compress treatment is extraordinary—authentic and deeply relaxing.",
+    name: "Omar Tazi",
+    role: "Rabat",
+  },
+  {
+    quote:
+      "A true sanctuary. The team is discreet, professional, and the atmosphere is exactly what you hope for from a high-end spa.",
+    name: "Yasmine Idrissi",
+    role: "Marrakech",
+  },
+  {
+    quote:
+      "From the first step inside I felt I was somewhere special. The signature fusion is my favourite.",
+    name: "Karim Amrani",
+    role: "Fes",
+  },
+];
+
+export default function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const next = useCallback(() => {
+    setIndex((i) => (i + 1) % TESTIMONIALS.length);
+  }, []);
+  const prev = useCallback(() => {
+    setIndex((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  }, []);
+
+  return (
+    <section
+      id="testimonials"
+      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark/50"
+    >
+      <div className="max-w-4xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-4"
+        >
+          Testimonials
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
+          className="text-charcoal/75 max-w-[55ch] mb-12"
+        >
+          What our guests say about us.
+        </motion.p>
+        <div className="relative min-h-[280px] md:min-h-[260px]">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -24 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="absolute inset-0"
+            >
+              <blockquote className="bg-cream border border-charcoal/10 rounded-2xl p-8 md:p-10 shadow-soft">
+                <p className="font-serif text-xl md:text-2xl text-charcoal leading-relaxed mb-8">
+                  &ldquo;{TESTIMONIALS[index].quote}&rdquo;
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/30 overflow-hidden shrink-0">
+                    <Image
+                      src={`https://picsum.photos/seed/${TESTIMONIALS[index].name.replace(/\s/g, "")}/96/96`}
+                      alt=""
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <cite className="font-medium text-charcoal not-italic">
+                      {TESTIMONIALS[index].name}
+                    </cite>
+                    <p className="text-sm text-charcoal/65">{TESTIMONIALS[index].role}</p>
+                  </div>
+                </div>
+              </blockquote>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <div className="flex items-center justify-between mt-8">
+          <button
+            type="button"
+            onClick={prev}
+            aria-label="Previous testimonial"
+            className="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            </svg>
+          </button>
+          <div className="flex gap-2">
+            {TESTIMONIALS.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setIndex(i)}
+                aria-label={`Go to testimonial ${i + 1}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                  i === index ? "bg-gold-dark scale-125" : "bg-charcoal/25 hover:bg-charcoal/40"
+                }`}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Next testimonial"
+            className="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
