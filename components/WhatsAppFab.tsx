@@ -14,10 +14,20 @@ export default function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact us on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-softGold hover:scale-105 active:scale-[0.98] transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-softGold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
       initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.5 }}
+      animate={{
+        scale: [1, 1.03, 1],
+        opacity: 1,
+      }}
+      transition={{
+        scale: {
+          repeat: Infinity,
+          duration: 2.5,
+          ease: "easeInOut",
+        },
+        opacity: { type: "spring", stiffness: 100, damping: 20, delay: 0.5 },
+      }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.98 }}
     >

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ThaiBorderLine } from "@/components/ThaiPatterns";
 
 const POINTS = [
   {
@@ -38,6 +39,9 @@ export default function WhyUs() {
             <p className="text-sage font-medium text-lg mb-2">
               Where two traditions meet
             </p>
+            <div className="mb-6 text-sage/20 w-24">
+              <ThaiBorderLine className="w-full h-2" />
+            </div>
             <p className="text-base md:text-lg text-charcoal/85 leading-relaxed max-w-[55ch]">
               In Morocco, hospitality is an art. In Thailand, massage is a centuries-old science. At Thai House, we honour both: a space where you are welcomed like family and cared for with time-honoured skill.
             </p>

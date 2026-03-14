@@ -1,10 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ThaiBorderLine } from "@/components/ThaiPatterns";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-cream py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-charcoal text-cream py-16 px-4 sm:px-6 lg:px-8 border-t border-gold/10">
       <div className="max-w-7xl mx-auto">
+        <div className="flex justify-center pt-2 pb-8 border-t border-gold/20">
+          <div className="text-gold/20 w-48 h-3 mt-4">
+            <ThaiBorderLine className="w-full h-full" />
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Link href="#hero" className="inline-flex items-center gap-2 mb-4">

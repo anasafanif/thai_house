@@ -55,21 +55,24 @@ export default function Services() {
       className="py-20 md:py-28 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-4"
+          className="mb-12"
         >
-          Our Services
-        </motion.h2>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
+            Our Services
+          </h2>
+          <div className="h-0.5 w-16 bg-gold/60 rounded-full" aria-hidden />
+        </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
-          className="text-charcoal/75 max-w-[55ch] mb-12"
+          className="text-sage/90 max-w-[55ch] mb-12 -mt-8"
         >
           Six distinct experiences, each designed to restore and renew.
         </motion.p>
@@ -87,7 +90,7 @@ export default function Services() {
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               className="group"
             >
-              <div className="p-6 md:p-8 rounded-2xl border border-charcoal/10 bg-cream hover:border-gold/30 hover:shadow-soft transition-all duration-300 h-full flex flex-col active:scale-[0.99]">
+              <div className="p-6 md:p-8 rounded-2xl border border-charcoal/10 bg-cream hover:border-gold/30 hover:border-l-2 hover:border-l-gold/50 hover:shadow-softGold transition-all duration-300 h-full flex flex-col active:scale-[0.98]">
                 <span className="text-gold-dark font-medium text-sm mb-2">
                   {String(index + 1).padStart(2, "0")}
                 </span>

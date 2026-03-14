@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { LotusMotif, LotusMotifSmall } from "@/components/ThaiPatterns";
+import FloatingLogo from "@/components/FloatingLogo";
+import ShimmerButton from "@/components/ShimmerButton";
 
 export default function Hero() {
   return (
@@ -15,6 +16,10 @@ export default function Hero() {
         aria-hidden
       >
         <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream to-gold/5" />
+        {/* Stronger lotus background: repeated subtle lotus silhouettes */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.04]">
+          <LotusMotif className="w-[min(60vw,500px)] h-[min(60vw,500px)] text-gold-dark" />
+        </div>
         <svg
           className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.06]"
           viewBox="0 0 200 200"
@@ -32,14 +37,7 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
             className="mb-8"
           >
-            <Image
-              src="/logo.png"
-              alt="Thai House Massage & Spa"
-              width={120}
-              height={120}
-              className="h-24 w-24 md:h-32 md:w-32 object-contain"
-              priority
-            />
+            <FloatingLogo />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -70,12 +68,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.4 }}
           >
-            <Link
-              href="#services"
-              className="inline-block px-8 py-3.5 font-medium bg-gold text-charcoal rounded-md hover:bg-gold-dark transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 active:scale-[0.98]"
-            >
+            <ShimmerButton href="#services">
               Discover Our Treatments
-            </Link>
+            </ShimmerButton>
           </motion.div>
         </div>
         <div className="lg:col-span-5 hidden lg:block" aria-hidden>
@@ -83,8 +78,21 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 24, delay: 0.3 }}
-            className="aspect-[4/5] rounded-2xl bg-gold/10 border border-gold/20"
-          />
+            className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-cream to-gold/10 border border-gold/20 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 flex items-center justify-center">
+              <LotusMotif
+                className="w-[70%] h-[70%] text-gold"
+                opacity="0.12"
+              />
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <LotusMotifSmall
+                className="w-20 h-20 text-gold-dark"
+                opacity="0.15"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

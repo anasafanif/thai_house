@@ -19,24 +19,21 @@ export default function Gallery() {
       className="py-20 md:py-28 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-4"
+          className="mb-12"
         >
-          Gallery
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
-          className="text-charcoal/75 max-w-[55ch] mb-12"
-        >
-          A glimpse into our sanctuary.
-        </motion.p>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
+            Gallery
+          </h2>
+          <div className="h-0.5 w-16 bg-sage/50 rounded-full mb-4" aria-hidden />
+          <p className="text-sage/90 max-w-[55ch]">
+            A glimpse into our sanctuary.
+          </p>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -50,7 +47,7 @@ export default function Gallery() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.06 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.05 }}
               className="break-inside-avoid mb-6"
             >
               <div className="relative rounded-2xl overflow-hidden bg-charcoal/5 aspect-[3/4] min-h-[200px]">

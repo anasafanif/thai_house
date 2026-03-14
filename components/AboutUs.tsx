@@ -29,15 +29,18 @@ export default function AboutUs() {
             </div>
           </motion.div>
           <div className="md:col-span-7 order-1 md:order-2">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
-              className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-6"
+              className="mb-6"
             >
-              About Us
-            </motion.h2>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
+                About Us
+              </h2>
+              <div className="h-0.5 w-16 bg-sage/50 rounded-full" aria-hidden />
+            </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}

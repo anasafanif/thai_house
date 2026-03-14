@@ -22,16 +22,8 @@ npm run build
 npm run start
 ```
 
-### Deploy on Vercel
-
-1. Push your code to GitHub ([anasafanif/thai_house](https://github.com/anasafanif/thai_house)).
-2. Go to [vercel.com](https://vercel.com) and sign in with GitHub.
-3. Click **Add New** → **Project**.
-4. Import the **thai_house** repository (select `anasafanif/thai_house`).
-5. Leave the defaults (Vercel detects Next.js; build command `npm run build`, output `.next`).
-6. Click **Deploy**. Vercel will build and give you a URL like `thai-house-xxx.vercel.app`.
-
-After the first deploy, every push to `main` will trigger a new deployment. To use a custom domain, go to your project → **Settings** → **Domains**.
+- **Vercel:** Import this repo; build command `npm run build`, output is the default Next.js output.
+- **Netlify:** Use the Next.js preset; build command `npm run build`.
 
 ## WhatsApp
 
@@ -43,5 +35,3 @@ Update the phone number in `components/WhatsAppFab.tsx`: set `WHATSAPP_NUMBER` t
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-hfkgf
-hgh

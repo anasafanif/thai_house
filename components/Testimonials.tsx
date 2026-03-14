@@ -46,24 +46,21 @@ export default function Testimonials() {
       className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark/50"
     >
       <div className="max-w-4xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-4"
+          className="mb-12"
         >
-          Testimonials
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
-          className="text-charcoal/75 max-w-[55ch] mb-12"
-        >
-          What our guests say about us.
-        </motion.p>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
+            Testimonials
+          </h2>
+          <div className="h-0.5 w-16 bg-gold/60 rounded-full mb-4" aria-hidden />
+          <p className="text-sage/90 max-w-[55ch]">
+            What our guests say about us.
+          </p>
+        </motion.div>
         <div className="relative min-h-[280px] md:min-h-[260px]">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
@@ -117,8 +114,8 @@ export default function Testimonials() {
                 type="button"
                 onClick={() => setIndex(i)}
                 aria-label={`Go to testimonial ${i + 1}`}
-                className={`w-2.5 h-2.5 rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                  i === index ? "bg-gold-dark scale-125" : "bg-charcoal/25 hover:bg-charcoal/40"
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                  i === index ? "bg-gold-dark scale-125" : "bg-charcoal/25 hover:bg-charcoal/40 hover:scale-110"
                 }`}
               />
             ))}

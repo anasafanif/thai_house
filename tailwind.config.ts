@@ -29,6 +29,19 @@ const config: Config = {
       boxShadow: {
         soft: "0 20px 40px -15px rgba(44, 44, 44, 0.06)",
         softGold: "0 8px 24px -4px rgba(212, 175, 119, 0.15)",
+        softGoldHover: "0 8px 24px -4px rgba(212, 175, 119, 0.25)",
+      },
+      keyframes: {
+        shimmer: {
+          "0%": { backgroundPosition: "200% 0" },
+          "100%": { backgroundPosition: "-200% 0" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 4s ease-in-out infinite",
+      },
+      backgroundSize: {
+        shimmer: "200% 100%",
       },
     },
   },

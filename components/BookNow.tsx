@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import ShimmerButton from "@/components/ShimmerButton";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -59,7 +60,7 @@ export default function BookNow() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
-          className="text-charcoal/75 max-w-[55ch] mb-12"
+          className="text-sage/90 max-w-[55ch] mb-12"
         >
           Send us your details and we will confirm your appointment.
         </motion.p>
@@ -71,7 +72,8 @@ export default function BookNow() {
           className="max-w-xl"
         >
           {formState === "success" ? (
-            <div className="p-8 rounded-2xl border border-gold/30 bg-gold/5 text-charcoal">
+            <div className="p-8 rounded-2xl border border-gold/30 bg-gold/5 text-charcoal relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gold/40" aria-hidden />
               <p className="font-medium mb-1">Request received.</p>
               <p className="text-sm text-charcoal/75">
                 We will contact you shortly to confirm your appointment.
@@ -90,7 +92,7 @@ export default function BookNow() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     placeholder="Your name"
                     disabled={formState === "loading"}
                   />
@@ -105,7 +107,7 @@ export default function BookNow() {
                     required
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     placeholder="+212 6XX XXX XXX"
                     disabled={formState === "loading"}
                   />
@@ -121,7 +123,7 @@ export default function BookNow() {
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     disabled={formState === "loading"}
                   />
                 </div>
@@ -134,7 +136,7 @@ export default function BookNow() {
                     type="time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     disabled={formState === "loading"}
                   />
                 </div>
@@ -147,7 +149,7 @@ export default function BookNow() {
                   id="book-service"
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-colors"
+                  className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                   disabled={formState === "loading"}
                 >
                   <option value="">Select a service</option>
@@ -168,7 +170,7 @@ export default function BookNow() {
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-colors resize-none"
+                  className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors resize-none"
                   placeholder="Any special requests or notes"
                   disabled={formState === "loading"}
                 />
@@ -178,13 +180,13 @@ export default function BookNow() {
                   {errorMessage}
                 </p>
               )}
-              <button
+              <ShimmerButton
                 type="submit"
                 disabled={formState === "loading"}
-                className="w-full sm:w-auto px-8 py-3.5 font-medium bg-gold text-charcoal rounded-md hover:bg-gold-dark transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.98]"
+                className="w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {formState === "loading" ? "Sending…" : "Send inquiry"}
-              </button>
+              </ShimmerButton>
             </form>
           )}
         </motion.div>
