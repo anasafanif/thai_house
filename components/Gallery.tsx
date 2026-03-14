@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ThaiPatternRepeat, ThaiBorderLine } from "@/components/ThaiPatterns";
 
 const GALLERY_IMAGES = [
   { src: "https://picsum.photos/seed/thai-gallery-1/600/800", alt: "Spa interior", w: 600, h: 800 },
@@ -16,9 +17,15 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream"
+      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <ThaiPatternRepeat id="gallery-pattern" opacity="0.06" className="text-gold-dark" />
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="flex justify-center mb-10">
+          <div className="text-gold/50 w-44 h-4">
+            <ThaiBorderLine className="w-full h-full" />
+          </div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,9 +55,10 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.05 }}
-              className="break-inside-avoid mb-6"
+              className="break-inside-avoid mb-6 relative group"
             >
-              <div className="relative rounded-2xl overflow-hidden bg-charcoal/5 aspect-[3/4] min-h-[200px]">
+              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" aria-hidden />
+              <div className="relative rounded-2xl overflow-hidden bg-charcoal/5 aspect-[3/4] min-h-[200px] border border-gold/10">
                 <Image
                   src={img.src}
                   alt={img.alt}

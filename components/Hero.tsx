@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LotusMotif, LotusMotifSmall } from "@/components/ThaiPatterns";
+import { LotusMotif, LotusMotifSmall, ThaiPatternRepeat, ThaiDiagonalPattern, ThaiBorderFrame } from "@/components/ThaiPatterns";
 import { FloatingLogo } from "@/components/FloatingLogo";
 import ShimmerButton from "@/components/ShimmerButton";
 
@@ -15,15 +15,20 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none z-0"
         aria-hidden
       >
-        {/* Less bright: warmer, deeper cream with subtle gold/sage */}
+        {/* Base: warmer, less bright */}
         <div className="absolute inset-0 bg-gradient-to-br from-cream-dark via-cream to-cream-warm" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/[0.02] to-transparent" />
-        {/* More visible lotus background */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]">
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/[0.03] to-transparent" />
+        {/* Repeating Thai lotus pattern across full hero */}
+        <ThaiPatternRepeat id="hero-pattern" opacity="0.09" className="text-gold-dark" />
+        {/* Subtle diagonal lines for depth */}
+        <ThaiDiagonalPattern id="hero-diagonal" opacity="0.03" className="text-gold-dark" />
+        {/* Large central lotus */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.12]">
           <LotusMotif className="w-[min(60vw,500px)] h-[min(60vw,500px)] text-gold-dark" />
         </div>
+        {/* Secondary lotus silhouette bottom-right */}
         <svg
-          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.1]"
+          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.12]"
           viewBox="0 0 200 200"
           fill="currentColor"
           aria-hidden
@@ -80,20 +85,26 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 24, delay: 0.3 }}
-            className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-cream-dark to-gold/15 border border-gold/30 shadow-softGold relative overflow-hidden"
+            className="aspect-[4/5] rounded-2xl relative"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <LotusMotif
-                className="w-[70%] h-[70%] text-gold-dark"
-                opacity="0.2"
-              />
-            </div>
-            <div className="absolute bottom-4 right-4">
-              <LotusMotifSmall
-                className="w-20 h-20 text-gold-dark"
-                opacity="0.25"
-              />
-            </div>
+            <ThaiBorderFrame className="absolute inset-0 rounded-2xl overflow-hidden">
+              <div className="absolute inset-0">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cream-dark to-gold/20 shadow-softGold" />
+                <ThaiPatternRepeat id="hero-panel-pattern" opacity="0.12" className="rounded-2xl text-gold-dark" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <LotusMotif
+                    className="w-[65%] h-[65%] text-gold-dark"
+                    opacity="0.28"
+                  />
+                </div>
+                <div className="absolute top-6 left-6">
+                  <LotusMotifSmall className="w-14 h-14 text-gold-dark" opacity="0.35" />
+                </div>
+                <div className="absolute bottom-6 right-6">
+                  <LotusMotifSmall className="w-16 h-16 text-gold-dark" opacity="0.25" />
+                </div>
+              </div>
+            </ThaiBorderFrame>
           </motion.div>
         </div>
       </div>

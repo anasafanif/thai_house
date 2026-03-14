@@ -110,3 +110,153 @@ export function DividerOrnament({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+/** Repeating Thai/lotus pattern for section backgrounds - use as overlay */
+export function ThaiPatternRepeat({
+  className = "",
+  opacity = "0.06",
+  id = "thai-lotus-repeat",
+}: {
+  className?: string;
+  opacity?: string;
+  id?: string;
+}) {
+  const size = 80;
+  return (
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+      aria-hidden
+    >
+      <svg
+        className="absolute inset-0 w-full h-full text-gold-dark"
+        style={{ opacity }}
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <pattern
+            id={id}
+            x="0"
+            y="0"
+            width={size}
+            height={size}
+            patternUnits="userSpaceOnUse"
+          >
+            <g transform={`translate(${size / 2}, ${size / 2})`}>
+              {[0, 1, 2, 3, 4, 5].map((i) => (
+                <ellipse
+                  key={i}
+                  cx={14 * Math.cos((i * 60 * Math.PI) / 180)}
+                  cy={14 * Math.sin((i * 60 * Math.PI) / 180)}
+                  rx="4"
+                  ry="8"
+                  transform={`rotate(${i * 60} 0 0)`}
+                  fill="currentColor"
+                />
+              ))}
+              <circle r="5" fill="currentColor" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill={`url(#${id})`} />
+      </svg>
+    </div>
+  );
+}
+
+/** Thai-style corner ornament (e.g. for cards or section frames) */
+export function CornerOrnament({
+  position = "top-left",
+  className = "",
+}: {
+  position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+  className?: string;
+}) {
+  const rotations: Record<string, string> = {
+    "top-left": "rotate-0",
+    "top-right": "scale-x-[-1]",
+    "bottom-left": "scale-y-[-1]",
+    "bottom-right": "scale-[-1]",
+  };
+  return (
+    <svg
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.2"
+      className={`absolute w-12 h-12 text-gold/50 ${rotations[position]} ${className}`}
+      aria-hidden
+    >
+      <path d="M4 4v20h20" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4 4h20v20" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4 12h8M12 4v8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+/** Subtle diagonal line pattern (Thai temple / fabric style) for backgrounds */
+export function ThaiDiagonalPattern({
+  className = "",
+  opacity = "0.04",
+  id = "thai-diagonal",
+}: {
+  className?: string;
+  opacity?: string;
+  id?: string;
+}) {
+  return (
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+      aria-hidden
+    >
+      <svg
+        className="absolute inset-0 w-full h-full text-gold-dark"
+        style={{ opacity }}
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <pattern
+            id={id}
+            x="0"
+            y="0"
+            width="24"
+            height="24"
+            patternUnits="userSpaceOnUse"
+            patternTransform="rotate(45)"
+          >
+            <path d="M0 12h24M12 0v24" stroke="currentColor" strokeWidth="0.6" fill="none" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill={`url(#${id})`} />
+      </svg>
+    </div>
+  );
+}
+
+/** Decorative Thai border frame - use around panels or images */
+export function ThaiBorderFrame({
+  className = "",
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={`relative ${className}`}>
+      <div className="absolute inset-0 border-2 border-gold/30 rounded-2xl pointer-events-none" aria-hidden />
+      <div className="absolute top-3 left-3 right-3 bottom-3 border border-gold/20 rounded-xl pointer-events-none" aria-hidden />
+      <div className="absolute top-2 left-2">
+        <CornerOrnament position="top-left" />
+      </div>
+      <div className="absolute top-2 right-2">
+        <CornerOrnament position="top-right" />
+      </div>
+      <div className="absolute bottom-2 left-2">
+        <CornerOrnament position="bottom-left" />
+      </div>
+      <div className="absolute bottom-2 right-2">
+        <CornerOrnament position="bottom-right" />
+      </div>
+      {children}
+    </div>
+  );
+}

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ThaiBorderLine } from "@/components/ThaiPatterns";
+import { ThaiBorderLine, ThaiPatternRepeat } from "@/components/ThaiPatterns";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-cream py-16 px-4 sm:px-6 lg:px-8 border-t border-gold/10">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-center pt-2 pb-8 border-t border-gold/20">
-          <div className="text-gold/20 w-48 h-3 mt-4">
+    <footer className="relative bg-charcoal text-cream py-16 px-4 sm:px-6 lg:px-8 border-t-2 border-gold/30 overflow-hidden">
+      <ThaiPatternRepeat id="footer-pattern" opacity="0.08" className="text-gold/30" />
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="flex justify-center pt-2 pb-8">
+          <div className="text-gold/50 w-56 h-5 mt-4">
             <ThaiBorderLine className="w-full h-full" />
           </div>
         </div>

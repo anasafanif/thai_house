@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ShimmerButton from "@/components/ShimmerButton";
+import { ThaiPatternRepeat, ThaiBorderLine } from "@/components/ThaiPatterns";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -43,9 +44,15 @@ export default function BookNow() {
   return (
     <section
       id="book-now"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream"
+      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <ThaiPatternRepeat id="booknow-pattern" opacity="0.05" className="text-gold-dark" />
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="flex justify-center mb-10">
+          <div className="text-gold/50 w-40 h-4">
+            <ThaiBorderLine className="w-full h-full" />
+          </div>
+        </div>
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

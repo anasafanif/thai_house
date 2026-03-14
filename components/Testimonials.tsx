@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { ThaiPatternRepeat, ThaiBorderLine } from "@/components/ThaiPatterns";
 
 const TESTIMONIALS = [
   {
@@ -43,9 +44,15 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark"
+      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto">
+      <ThaiPatternRepeat id="testimonials-pattern" opacity="0.07" className="text-gold-dark" />
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="flex justify-center mb-10">
+          <div className="text-gold/60 w-40 h-4">
+            <ThaiBorderLine className="w-full h-full" />
+          </div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

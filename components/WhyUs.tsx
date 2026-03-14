@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ThaiBorderLine } from "@/components/ThaiPatterns";
+import { ThaiBorderLine, ThaiPatternRepeat } from "@/components/ThaiPatterns";
 
 const POINTS = [
   {
@@ -22,9 +22,15 @@ export default function WhyUs() {
   return (
     <section
       id="why-us"
-      className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark"
+      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <ThaiPatternRepeat id="whyus-pattern" opacity="0.07" className="text-sage/40" />
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="flex justify-center mb-10">
+          <div className="text-gold/60 w-48 h-4">
+            <ThaiBorderLine className="w-full h-full" />
+          </div>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -39,8 +45,8 @@ export default function WhyUs() {
             <p className="text-sage font-medium text-lg mb-2">
               Where two traditions meet
             </p>
-            <div className="mb-6 text-gold-dark/40 w-24">
-              <ThaiBorderLine className="w-full h-2" />
+            <div className="mb-6 text-gold-dark/60 w-28">
+              <ThaiBorderLine className="w-full h-2.5" />
             </div>
             <p className="text-base md:text-lg text-charcoal/85 leading-relaxed max-w-[55ch]">
               In Morocco, hospitality is an art. In Thailand, massage is a centuries-old science. At Thai House, we honour both: a space where you are welcomed like family and cared for with time-honoured skill.
