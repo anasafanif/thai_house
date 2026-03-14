@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${outfit.variable}`}>
-      <body className="font-sans min-h-screen bg-cream">
+      <body className="font-sans min-h-screen bg-cream" data-site-version="premium-redesign">
         <Navbar />
         <main>{children}</main>
         <WhatsAppFab />
