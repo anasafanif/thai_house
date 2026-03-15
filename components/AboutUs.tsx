@@ -22,8 +22,8 @@ export default function AboutUs() {
             <ThaiBorderFrame className="aspect-[4/5] rounded-2xl overflow-hidden">
               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gold/5">
               <Image
-                src="https://images.pexels.com/photos/6629548/pexels-photo-6629548.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Thai House Massage & Spa – professional massage in a calm setting"
+                src="/about-spa-room.png"
+                alt="Luxury Thai spa room with warm candle lighting"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

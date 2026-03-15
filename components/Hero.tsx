@@ -1,110 +1,84 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { LotusMotif, LotusMotifSmall, ThaiPatternRepeat, ThaiBorderFrame } from "@/components/ThaiPatterns";
-import { FloatingLogo } from "@/components/FloatingLogo";
+import { ThaiBorderLine } from "@/components/ThaiPatterns";
 import ShimmerButton from "@/components/ShimmerButton";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-brown"
     >
-      <div
-        className="absolute inset-0 pointer-events-none z-0"
-        aria-hidden
-      >
-        {/* Luxury cream/beige base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream to-beige" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brown/[0.02] to-transparent" />
-        {/* Very subtle pattern only */}
-        <ThaiPatternRepeat id="hero-pattern" opacity="0.04" className="text-gold" />
-        <div className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
-          <LotusMotif className="w-[min(60vw,500px)] h-[min(60vw,500px)] text-gold" />
+      <div className="absolute inset-0 z-0" aria-hidden>
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
+          <Image
+            src="/hero-massage-crop.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-brown/30 via-transparent to-transparent" />
         </div>
-        {/* Secondary lotus silhouette bottom-right */}
-        <svg
-          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.08]"
-          viewBox="0 0 200 200"
-          fill="currentColor"
-          aria-hidden
-        >
-          <path d="M100 20c-20 0-40 10-55 30-15 20-25 45-25 70 0 25 10 50 25 70 15 20 35 30 55 30s40-10 55-30c15-20 25-45 25-70 0-25-10-50-25-70C140 30 120 20 100 20zm0 30c12 0 22 6 32 18 10 12 16 28 16 42 0 14-6 30-16 42-10 12-20 18-32 18s-22-6-32-18c-10-12-16-28-16-42 0-14 6-30 16-42 10-12 20-18 32-18z" />
-        </svg>
+        <div className="absolute inset-0 bg-gradient-to-r from-brown/88 via-brown/38 to-transparent lg:hidden" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_38%,rgba(246,241,233,0.98)_0%,rgba(246,241,233,0.96)_18%,rgba(246,241,233,0.88)_30%,rgba(246,241,233,0.64)_42%,rgba(246,241,233,0.18)_56%,rgba(246,241,233,0)_72%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(246,241,233,0.95)_0%,rgba(246,241,233,0.88)_22%,rgba(246,241,233,0.42)_40%,rgba(246,241,233,0)_62%)]" />
+        <div className="absolute inset-y-0 left-0 w-[38%] opacity-[0.18] bg-[radial-gradient(circle_at_35%_30%,rgba(198,165,92,0.22),transparent_58%)]" />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <div className="lg:col-span-7 pt-20 lg:pt-0">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            className="mb-8"
-          >
-            <FloatingLogo />
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight text-brown leading-none mb-3"
-          >
-            Thai House
-          </motion.h1>
-          <div className="h-px w-16 bg-gold rounded-full mb-5" aria-hidden />
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-            className="font-serif text-2xl md:text-3xl text-gold mb-6"
-          >
-            Massage & Spa
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
-            className="text-base md:text-lg text-brown/80 max-w-[45ch] mb-10 leading-relaxed"
-          >
-            Where Moroccan warmth meets Thai tradition. A sanctuary of wellness in the heart of Morocco.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.4 }}
-            className="flex flex-wrap gap-4"
-          >
-            <ShimmerButton href="#services" className="!px-10 !py-4 text-base">
-              Discover Our Treatments
-            </ShimmerButton>
-          </motion.div>
-        </div>
-        <div className="lg:col-span-5 hidden lg:block" aria-hidden>
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 80, damping: 24, delay: 0.3 }}
-            className="aspect-[4/5] rounded-2xl relative"
-          >
-            <ThaiBorderFrame className="absolute inset-0 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cream-dark to-gold/20 shadow-softGold" />
-                <ThaiPatternRepeat id="hero-panel-pattern" opacity="0.12" className="rounded-2xl text-gold-dark" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <LotusMotif
-                    className="w-[65%] h-[65%] text-gold"
-                    opacity="0.2"
-                  />
-                </div>
-                <div className="absolute top-6 left-6">
-                  <LotusMotifSmall className="w-14 h-14 text-gold" opacity="0.25" />
-                </div>
-                <div className="absolute bottom-6 right-6">
-                  <LotusMotifSmall className="w-16 h-16 text-gold" opacity="0.2" />
-                </div>
-              </div>
-            </ThaiBorderFrame>
-          </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center min-h-[100dvh]">
+          <div className="lg:col-span-6 pt-28 pb-16 lg:pt-32 lg:pb-20">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="font-serif text-[clamp(2.3rem,5vw,4rem)] text-brown leading-none mb-4"
+            >
+              Thai House
+            </motion.p>
+            <div className="flex items-center gap-4 mb-6 text-gold/80">
+              <span className="h-px w-14 bg-gold/60" />
+              <ThaiBorderLine className="w-20 h-2.5" />
+              <span className="h-px w-14 bg-gold/60" />
+            </div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
+              className="font-serif text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] tracking-[-0.03em] text-brown max-w-[8.5ch] mb-6"
+            >
+              Authentic Thai Massage &amp; Spa
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
+              className="text-base md:text-xl text-brown/80 max-w-[28ch] leading-relaxed mb-10"
+            >
+              Experience traditional Thai wellness performed by skilled Thai therapists in a calm luxury spa in Kenitra.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
+              className="flex flex-wrap gap-4"
+            >
+              <ShimmerButton href="#book-now" className="!px-9 !py-4 text-base">
+                Book Your Experience
+              </ShimmerButton>
+              <Link
+                href="#services"
+                className="inline-flex items-center justify-center rounded-xl border border-gold/60 bg-cream/65 px-9 py-4 text-base font-medium text-brown shadow-[0_10px_24px_-14px_rgba(31,26,23,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/80 hover:shadow-[0_14px_30px_-12px_rgba(31,26,23,0.35)]"
+              >
+                View Treatments
+              </Link>
+            </motion.div>
+          </div>
+          <div className="hidden lg:block lg:col-span-6" aria-hidden />
         </div>
       </div>
     </section>
