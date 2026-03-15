@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ShimmerButton from "@/components/ShimmerButton";
-import { ThaiPatternRepeat, ThaiBorderLine } from "@/components/ThaiPatterns";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -44,31 +43,25 @@ export default function BookNow() {
   return (
     <section
       id="book-now"
-      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
+      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
     >
-      <ThaiPatternRepeat id="booknow-pattern" opacity="0.05" className="text-gold-dark" />
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="flex justify-center mb-10">
-          <div className="text-gold/50 w-40 h-4">
-            <ThaiBorderLine className="w-full h-full" />
-          </div>
-        </div>
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2"
+          className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3"
         >
           Book Now
         </motion.h2>
-        <div className="h-0.5 w-20 bg-gold/70 rounded-full mb-4" aria-hidden />
+        <div className="h-px w-20 bg-gold rounded-full mb-4" aria-hidden />
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
-          className="text-sage/90 max-w-[55ch] mb-12"
+          className="text-brown/70 max-w-[55ch] mb-12"
         >
           Send us your details and we will confirm your appointment.
         </motion.p>
@@ -80,18 +73,19 @@ export default function BookNow() {
           className="max-w-xl"
         >
           {formState === "success" ? (
-            <div className="p-8 rounded-2xl border border-gold/30 bg-gold/5 text-charcoal relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gold/40" aria-hidden />
+            <div className="p-8 rounded-2xl border border-gold/30 bg-gold/5 text-brown relative overflow-hidden shadow-card">
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gold/50" aria-hidden />
               <p className="font-medium mb-1">Request received.</p>
-              <p className="text-sm text-charcoal/75">
+              <p className="text-sm text-brown/75">
                 We will contact you shortly to confirm your appointment.
               </p>
             </div>
           ) : (
+            <div className="rounded-2xl bg-beige/80 p-8 md:p-10 shadow-card border border-gold/10">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="book-name" className="text-sm font-medium text-charcoal">
+                  <label htmlFor="book-name" className="text-sm font-medium text-brown">
                     Name
                   </label>
                   <input
@@ -100,13 +94,13 @@ export default function BookNow() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     placeholder="Your name"
                     disabled={formState === "loading"}
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="book-contact" className="text-sm font-medium text-charcoal">
+                  <label htmlFor="book-contact" className="text-sm font-medium text-brown">
                     Phone or email
                   </label>
                   <input
@@ -115,7 +109,7 @@ export default function BookNow() {
                     required
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     placeholder="+212 6XX XXX XXX"
                     disabled={formState === "loading"}
                   />
@@ -123,7 +117,7 @@ export default function BookNow() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="book-date" className="text-sm font-medium text-charcoal">
+                  <label htmlFor="book-date" className="text-sm font-medium text-brown">
                     Preferred date
                   </label>
                   <input
@@ -131,12 +125,12 @@ export default function BookNow() {
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     disabled={formState === "loading"}
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="book-time" className="text-sm font-medium text-charcoal">
+                  <label htmlFor="book-time" className="text-sm font-medium text-brown">
                     Preferred time
                   </label>
                   <input
@@ -144,20 +138,20 @@ export default function BookNow() {
                     type="time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
+                    className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                     disabled={formState === "loading"}
                   />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="book-service" className="text-sm font-medium text-charcoal">
+                <label htmlFor="book-service" className="text-sm font-medium text-brown">
                   Service
                 </label>
                 <select
                   id="book-service"
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
+                  className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                   disabled={formState === "loading"}
                 >
                   <option value="">Select a service</option>
@@ -170,7 +164,7 @@ export default function BookNow() {
                 </select>
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="book-message" className="text-sm font-medium text-charcoal">
+                <label htmlFor="book-message" className="text-sm font-medium text-brown">
                   Message
                 </label>
                 <textarea
@@ -178,7 +172,7 @@ export default function BookNow() {
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="px-4 py-3 rounded-lg border border-charcoal/20 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors resize-none"
+                  className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors resize-none"
                   placeholder="Any special requests or notes"
                   disabled={formState === "loading"}
                 />
@@ -196,6 +190,7 @@ export default function BookNow() {
                 {formState === "loading" ? "Sending…" : "Send inquiry"}
               </ShimmerButton>
             </form>
+            </div>
           )}
         </motion.div>
       </div>

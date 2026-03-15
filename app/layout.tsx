@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -11,8 +11,8 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600"],
@@ -30,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${outfit.variable}`}>
-      <body className="font-sans min-h-screen bg-cream" data-site-version="premium-redesign">
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+      <body className="font-sans min-h-screen bg-cream antialiased" data-site-version="luxury-spa">
         <Navbar />
         <main>{children}</main>
         <WhatsAppFab />

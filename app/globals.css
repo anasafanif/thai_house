@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 :root {
-  /* Premium, less bright: warmer and deeper */
-  --gold: #c9a227;
-  --gold-dark: #a8841f;
-  --cream: #f5f0e8;
-  --cream-dark: #ebe4d9;
-  --cream-warm: #efe9e0;
+  /* Luxury spa palette */
+  --gold: #C6A55C;
+  --gold-dark: #b89448;
+  --gold-light: #D8BE82;
+  --cream: #F6F1E9;
+  --beige: #E9DDCC;
+  --brown: #1F1A17;
   --sage: #5c6b5c;
-  --sage-muted: #4a554a;
-  --charcoal: #2c2c2c;
-  --charcoal-soft: #3d3d3d;
+  --charcoal: #1F1A17;
 }
 
 html {
@@ -20,7 +19,8 @@ html {
 }
 
 body {
-  @apply bg-cream text-charcoal antialiased;
+  @apply bg-cream text-brown antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 @layer utilities {

@@ -32,7 +32,7 @@ export default function Navbar() {
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-cream-dark/90 backdrop-blur-md border-b-2 border-gold/30 shadow-soft"
+          ? "bg-brown/95 backdrop-blur-md border-b border-gold/40 shadow-soft"
           : "bg-transparent"
       }`}
     >
@@ -50,7 +50,7 @@ export default function Navbar() {
             className="h-10 w-10 md:h-12 md:w-12 object-contain"
             priority
           />
-          <span className="font-serif text-lg md:text-xl font-semibold text-charcoal hidden sm:inline">
+          <span className={`font-serif text-lg md:text-xl font-semibold hidden sm:inline ${scrolled ? "text-cream" : "text-brown"}`}>
             Thai House
           </span>
         </Link>
@@ -59,14 +59,16 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="px-3 py-2 text-sm text-charcoal/80 hover:text-gold-dark transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-gold inline-block hover:scale-[1.02] transition-transform duration-200"
+                className={`px-3 py-2 text-sm transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-gold inline-block hover:scale-[1.02] transition-transform duration-200 ${
+                  scrolled ? "text-cream/95 hover:text-gold-light" : "text-brown/90 hover:text-gold"
+                }`}
               >
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
-        <ShimmerButton href="#book-now" className="shrink-0 px-4 py-2 text-sm">
+        <ShimmerButton href="#book-now" className="shrink-0 px-5 py-2.5 text-sm !text-brown">
           Book Now
         </ShimmerButton>
       </nav>

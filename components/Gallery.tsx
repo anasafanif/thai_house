@@ -2,42 +2,35 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ThaiPatternRepeat, ThaiBorderLine } from "@/components/ThaiPatterns";
 
 const GALLERY_IMAGES = [
-  { src: "https://picsum.photos/seed/thai-gallery-1/600/800", alt: "Spa interior", w: 600, h: 800 },
-  { src: "https://picsum.photos/seed/thai-gallery-2/600/500", alt: "Treatment room", w: 600, h: 500 },
-  { src: "https://picsum.photos/seed/thai-gallery-3/600/700", alt: "Relaxation area", w: 600, h: 700 },
-  { src: "https://picsum.photos/seed/thai-gallery-4/600/400", alt: "Detail", w: 600, h: 400 },
-  { src: "https://picsum.photos/seed/thai-gallery-5/600/600", alt: "Ambiance", w: 600, h: 600 },
-  { src: "https://picsum.photos/seed/thai-gallery-6/600/900", alt: "Wellness space", w: 600, h: 900 },
+  { src: "https://images.pexels.com/photos/6629548/pexels-photo-6629548.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Spa massage – therapist working on client" },
+  { src: "https://images.pexels.com/photos/6629563/pexels-photo-6629563.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Massage therapy session" },
+  { src: "https://images.pexels.com/photos/6629557/pexels-photo-6629557.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Relaxation and wellness treatment" },
+  { src: "https://images.pexels.com/photos/6629549/pexels-photo-6629549.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Luxury spa interior" },
+  { src: "https://images.pexels.com/photos/6629611/pexels-photo-6629611.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Calm treatment room" },
+  { src: "https://images.pexels.com/photos/6629550/pexels-photo-6629550.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Wellness and massage ambiance" },
 ];
 
 export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
+      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
     >
-      <ThaiPatternRepeat id="gallery-pattern" opacity="0.06" className="text-gold-dark" />
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="flex justify-center mb-10">
-          <div className="text-gold/50 w-44 h-4">
-            <ThaiBorderLine className="w-full h-full" />
-          </div>
-        </div>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="mb-12"
+          className="mb-14"
         >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
             Gallery
           </h2>
-          <div className="h-0.5 w-20 bg-gold/70 rounded-full mb-4" aria-hidden />
-          <p className="text-sage/90 max-w-[55ch]">
+          <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
+          <p className="text-brown/70 max-w-[55ch] mt-4">
             A glimpse into our sanctuary.
           </p>
         </motion.div>
@@ -57,15 +50,15 @@ export default function Gallery() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.05 }}
               className="break-inside-avoid mb-6 relative group"
             >
-              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10" aria-hidden />
-              <div className="relative rounded-2xl overflow-hidden bg-charcoal/5 aspect-[3/4] min-h-[200px] border border-gold/10">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] min-h-[200px] shadow-card hover:shadow-cardHover transition-shadow duration-300">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-brown/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden />
               </div>
             </motion.div>
           ))}

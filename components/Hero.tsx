@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LotusMotif, LotusMotifSmall, ThaiPatternRepeat, ThaiDiagonalPattern, ThaiBorderFrame } from "@/components/ThaiPatterns";
+import { LotusMotif, LotusMotifSmall, ThaiPatternRepeat, ThaiBorderFrame } from "@/components/ThaiPatterns";
 import { FloatingLogo } from "@/components/FloatingLogo";
 import ShimmerButton from "@/components/ShimmerButton";
 
@@ -15,20 +15,17 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none z-0"
         aria-hidden
       >
-        {/* Base: warmer, less bright */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cream-dark via-cream to-cream-warm" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/[0.03] to-transparent" />
-        {/* Repeating Thai lotus pattern across full hero */}
-        <ThaiPatternRepeat id="hero-pattern" opacity="0.09" className="text-gold-dark" />
-        {/* Subtle diagonal lines for depth */}
-        <ThaiDiagonalPattern id="hero-diagonal" opacity="0.03" className="text-gold-dark" />
-        {/* Large central lotus */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-[0.12]">
-          <LotusMotif className="w-[min(60vw,500px)] h-[min(60vw,500px)] text-gold-dark" />
+        {/* Luxury cream/beige base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream to-beige" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brown/[0.02] to-transparent" />
+        {/* Very subtle pattern only */}
+        <ThaiPatternRepeat id="hero-pattern" opacity="0.04" className="text-gold" />
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
+          <LotusMotif className="w-[min(60vw,500px)] h-[min(60vw,500px)] text-gold" />
         </div>
         {/* Secondary lotus silhouette bottom-right */}
         <svg
-          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.12]"
+          className="absolute bottom-0 right-0 w-[80vw] max-w-2xl h-[70vh] max-h-[600px] text-gold/[0.08]"
           viewBox="0 0 200 200"
           fill="currentColor"
           aria-hidden
@@ -50,15 +47,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-charcoal leading-none mb-4"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight text-brown leading-none mb-3"
           >
             Thai House
           </motion.h1>
+          <div className="h-px w-16 bg-gold rounded-full mb-5" aria-hidden />
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-            className="font-serif text-2xl md:text-3xl text-gold-dark mb-6"
+            className="font-serif text-2xl md:text-3xl text-gold mb-6"
           >
             Massage & Spa
           </motion.p>
@@ -66,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
-            className="text-base md:text-lg text-charcoal/80 max-w-[45ch] mb-10"
+            className="text-base md:text-lg text-brown/80 max-w-[45ch] mb-10 leading-relaxed"
           >
             Where Moroccan warmth meets Thai tradition. A sanctuary of wellness in the heart of Morocco.
           </motion.p>
@@ -74,8 +72,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.4 }}
+            className="flex flex-wrap gap-4"
           >
-            <ShimmerButton href="#services">
+            <ShimmerButton href="#services" className="!px-10 !py-4 text-base">
               Discover Our Treatments
             </ShimmerButton>
           </motion.div>
@@ -93,15 +92,15 @@ export default function Hero() {
                 <ThaiPatternRepeat id="hero-panel-pattern" opacity="0.12" className="rounded-2xl text-gold-dark" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <LotusMotif
-                    className="w-[65%] h-[65%] text-gold-dark"
-                    opacity="0.28"
+                    className="w-[65%] h-[65%] text-gold"
+                    opacity="0.2"
                   />
                 </div>
                 <div className="absolute top-6 left-6">
-                  <LotusMotifSmall className="w-14 h-14 text-gold-dark" opacity="0.35" />
+                  <LotusMotifSmall className="w-14 h-14 text-gold" opacity="0.25" />
                 </div>
                 <div className="absolute bottom-6 right-6">
-                  <LotusMotifSmall className="w-16 h-16 text-gold-dark" opacity="0.25" />
+                  <LotusMotifSmall className="w-16 h-16 text-gold" opacity="0.2" />
                 </div>
               </div>
             </ThaiBorderFrame>

@@ -3,7 +3,6 @@
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ThaiPatternRepeat, ThaiBorderLine } from "@/components/ThaiPatterns";
 
 const TESTIMONIALS = [
   {
@@ -44,27 +43,21 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-cream-dark overflow-hidden"
+      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
     >
-      <ThaiPatternRepeat id="testimonials-pattern" opacity="0.07" className="text-gold-dark" />
       <div className="relative z-10 max-w-4xl mx-auto">
-        <div className="flex justify-center mb-10">
-          <div className="text-gold/60 w-40 h-4">
-            <ThaiBorderLine className="w-full h-full" />
-          </div>
-        </div>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="mb-12"
+          className="mb-14"
         >
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal tracking-tight mb-2">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
             Testimonials
           </h2>
-          <div className="h-0.5 w-20 bg-gold-dark/80 rounded-full mb-4" aria-hidden />
-          <p className="text-sage/90 max-w-[55ch]">
+          <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
+          <p className="text-brown/70 max-w-[55ch] mt-4">
             What our guests say about us.
           </p>
         </motion.div>
@@ -78,8 +71,8 @@ export default function Testimonials() {
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               className="absolute inset-0"
             >
-              <blockquote className="bg-cream border border-gold/20 rounded-2xl p-8 md:p-10 shadow-soft">
-                <p className="font-serif text-xl md:text-2xl text-charcoal leading-relaxed mb-8">
+              <blockquote className="bg-white/90 border border-gold/25 rounded-2xl p-8 md:p-10 shadow-card">
+                <p className="font-serif text-xl md:text-2xl text-brown leading-relaxed mb-8">
                   &ldquo;{TESTIMONIALS[index].quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4">
@@ -93,10 +86,10 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <cite className="font-medium text-charcoal not-italic">
+                    <cite className="font-medium text-brown not-italic">
                       {TESTIMONIALS[index].name}
                     </cite>
-                    <p className="text-sm text-charcoal/65">{TESTIMONIALS[index].role}</p>
+                    <p className="text-sm text-brown/65">{TESTIMONIALS[index].role}</p>
                   </div>
                 </div>
               </blockquote>
@@ -108,7 +101,7 @@ export default function Testimonials() {
             type="button"
             onClick={prev}
             aria-label="Previous testimonial"
-            className="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
+            className="w-12 h-12 rounded-full border border-brown/20 flex items-center justify-center text-brown hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
               <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
@@ -122,7 +115,7 @@ export default function Testimonials() {
                 onClick={() => setIndex(i)}
                 aria-label={`Go to testimonial ${i + 1}`}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                  i === index ? "bg-gold-dark scale-125" : "bg-charcoal/25 hover:bg-charcoal/40 hover:scale-110"
+                  i === index ? "bg-gold scale-125" : "bg-brown/25 hover:bg-brown/40 hover:scale-110"
                 }`}
               />
             ))}
@@ -131,7 +124,7 @@ export default function Testimonials() {
             type="button"
             onClick={next}
             aria-label="Next testimonial"
-            className="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
+            className="w-12 h-12 rounded-full border border-brown/20 flex items-center justify-center text-brown hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
               <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
