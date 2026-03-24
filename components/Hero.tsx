@@ -19,8 +19,8 @@ export default function Hero() {
             alt=""
             fill
             priority
-            className="object-cover object-center"
-            sizes="100vw"
+            className="object-cover object-[90%_22%] min-[480px]:object-[88%_24%] lg:object-[58%_40%]"
+            sizes="(max-width: 1024px) 100vw, 62vw"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-brown/30 via-transparent to-transparent" />
         </div>
