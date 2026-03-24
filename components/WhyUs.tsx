@@ -5,16 +5,16 @@ import { ThaiBorderLine } from "@/components/ThaiPatterns";
 
 const POINTS = [
   {
-    title: "Moroccan–Thai Fusion",
-    text: "We blend the warmth and generosity of Moroccan hospitality with the precision and depth of Thai healing arts.",
+    title: "Fusion maroco-thaïlandaise",
+    text: "Nous mêlons la chaleur et la générosité de l’hospitalité marocaine à la précision et la profondeur des arts de guérison thaïs.",
   },
   {
-    title: "Expert Practitioners",
-    text: "Our therapists are trained in traditional Thai techniques and bring years of experience to every session.",
+    title: "Praticiens experts",
+    text: "Nos thérapeutes sont formés aux techniques thaï traditionnelles et mettent des années d’expérience au service de chaque séance.",
   },
   {
-    title: "Sanctuary Setting",
-    text: "A calm, luxurious environment designed for complete escape—where every detail supports your wellness.",
+    title: "Un cadre sanctuaire",
+    text: "Un environnement calme et luxueux pensé pour une évasion totale — chaque détail soutient votre bien-être.",
   },
 ];
 
@@ -34,17 +34,17 @@ export default function WhyUs() {
             className="lg:col-span-5"
           >
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
-              Why Thai House
+              Pourquoi Thai House
             </h2>
             <div className="h-px w-20 bg-gold rounded-full mb-4" aria-hidden />
             <p className="text-gold-dark font-medium text-lg mb-2">
-              Where two traditions meet
+              Là où deux traditions se rencontrent
             </p>
             <div className="mb-6 text-gold/60 w-28">
               <ThaiBorderLine className="w-full h-2.5" />
             </div>
             <p className="text-base md:text-lg text-brown/85 leading-relaxed max-w-[55ch]">
-              In Morocco, hospitality is an art. In Thailand, massage is a centuries-old science. At Thai House, we honour both: a space where you are welcomed like family and cared for with time-honoured skill.
+              Au Maroc, l’hospitalité est un art. En Thaïlande, le massage est une science séculaire. Chez Thai House, nous honorons les deux : un lieu où l’on vous accueille comme en famille et où l’on prend soin de vous avec un savoir-faire ancestral.
             </p>
           </motion.div>
           <div className="lg:col-span-7 space-y-8">

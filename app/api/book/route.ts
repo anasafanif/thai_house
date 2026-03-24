@@ -13,14 +13,14 @@ export async function POST(request: NextRequest) {
     };
     if (!name || !contact) {
       return NextResponse.json(
-        { error: "Name and contact are required" },
+        { error: "Le nom et les coordonnées sont obligatoires" },
         { status: 400 }
       );
     }
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
-      { error: "Invalid request" },
+      { error: "Requête invalide" },
       { status: 400 }
     );
   }

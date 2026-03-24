@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 
 const WHATSAPP_NUMBER = "212600000000";
-const PRE_FILL_MESSAGE = "Hello, I would like to book a treatment at Thai House Massage & Spa.";
+const PRE_FILL_MESSAGE =
+  "Bonjour, je souhaite réserver un soin chez Thai House Massage & Spa.";
 
 const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(PRE_FILL_MESSAGE)}`;
 
@@ -13,7 +14,7 @@ export default function WhatsAppFab() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contact us on WhatsApp"
+      aria-label="Nous contacter sur WhatsApp"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-softGold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
       initial={{ scale: 0, opacity: 0 }}
       animate={{

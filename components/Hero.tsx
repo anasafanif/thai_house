@@ -49,9 +49,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
-              className="font-serif text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] tracking-[-0.03em] text-brown max-w-[8.5ch] mb-6"
+              className="font-serif text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] tracking-[-0.03em] text-brown max-w-[18ch] mb-6"
             >
-              Authentic Thai Massage &amp; Spa
+              Massage thaï authentique &amp; spa
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
               className="text-base md:text-xl text-brown/80 max-w-[28ch] leading-relaxed mb-10"
             >
-              Experience traditional Thai wellness performed by skilled Thai therapists in a calm luxury spa in Kenitra.
+              Découvrez le bien-être thaï traditionnel prodigué par des thérapeutes thaïlandais qualifiés dans un spa de luxe apaisant à Kénitra.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -68,13 +68,13 @@ export default function Hero() {
               className="flex flex-wrap gap-4"
             >
               <ShimmerButton href="#book-now" className="!px-9 !py-4 text-base">
-                Book Your Experience
+                Réservez votre expérience
               </ShimmerButton>
               <Link
                 href="#services"
                 className="inline-flex items-center justify-center rounded-xl border border-gold/60 bg-cream/65 px-9 py-4 text-base font-medium text-brown shadow-[0_10px_24px_-14px_rgba(31,26,23,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/80 hover:shadow-[0_14px_30px_-12px_rgba(31,26,23,0.35)]"
               >
-                View Treatments
+                Voir les soins
               </Link>
             </motion.div>
           </div>

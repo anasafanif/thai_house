@@ -36,7 +36,9 @@ export default function BookNow() {
       setMessage("");
     } catch {
       setFormState("error");
-      setErrorMessage("Could not send your request. Please try WhatsApp or call us.");
+      setErrorMessage(
+        "Impossible d’envoyer votre demande. Veuillez utiliser WhatsApp ou nous appeler."
+      );
     }
   };
 
@@ -53,7 +55,7 @@ export default function BookNow() {
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
           className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3"
         >
-          Book Now
+          Réserver
         </motion.h2>
         <div className="h-px w-20 bg-gold rounded-full mb-4" aria-hidden />
         <motion.p
@@ -63,7 +65,7 @@ export default function BookNow() {
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
           className="text-brown/70 max-w-[55ch] mb-12"
         >
-          Send us your details and we will confirm your appointment.
+          Envoyez-nous vos coordonnées et nous confirmerons votre rendez-vous.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,9 +77,9 @@ export default function BookNow() {
           {formState === "success" ? (
             <div className="p-8 rounded-2xl border border-gold/30 bg-gold/5 text-brown relative overflow-hidden shadow-card">
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gold/50" aria-hidden />
-              <p className="font-medium mb-1">Request received.</p>
+              <p className="font-medium mb-1">Demande bien reçue.</p>
               <p className="text-sm text-brown/75">
-                We will contact you shortly to confirm your appointment.
+                Nous vous contacterons sous peu pour confirmer votre rendez-vous.
               </p>
             </div>
           ) : (
@@ -86,7 +88,7 @@ export default function BookNow() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="book-name" className="text-sm font-medium text-brown">
-                    Name
+                    Nom
                   </label>
                   <input
                     id="book-name"
@@ -95,13 +97,13 @@ export default function BookNow() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
-                    placeholder="Your name"
+                    placeholder="Votre nom"
                     disabled={formState === "loading"}
                   />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="book-contact" className="text-sm font-medium text-brown">
-                    Phone or email
+                    Téléphone ou e-mail
                   </label>
                   <input
                     id="book-contact"
@@ -118,7 +120,7 @@ export default function BookNow() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="book-date" className="text-sm font-medium text-brown">
-                    Preferred date
+                    Date souhaitée
                   </label>
                   <input
                     id="book-date"
@@ -131,7 +133,7 @@ export default function BookNow() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="book-time" className="text-sm font-medium text-brown">
-                    Preferred time
+                    Heure souhaitée
                   </label>
                   <input
                     id="book-time"
@@ -145,7 +147,7 @@ export default function BookNow() {
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="book-service" className="text-sm font-medium text-brown">
-                  Service
+                  Prestation
                 </label>
                 <select
                   id="book-service"
@@ -154,13 +156,13 @@ export default function BookNow() {
                   className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors"
                   disabled={formState === "loading"}
                 >
-                  <option value="">Select a service</option>
-                  <option value="traditional-thai">Traditional Thai Massage</option>
-                  <option value="aromatherapy">Aromatherapy Massage</option>
-                  <option value="hot-stone">Hot Stone Therapy</option>
-                  <option value="herbal-compress">Thai Herbal Compress</option>
-                  <option value="deep-tissue">Deep Tissue</option>
-                  <option value="signature-fusion">Signature Fusion</option>
+                  <option value="">Choisir une prestation</option>
+                  <option value="traditional-thai">Massage thaï traditionnel</option>
+                  <option value="aromatherapy">Massage à l’aromathérapie</option>
+                  <option value="hot-stone">Thérapie aux pierres chaudes</option>
+                  <option value="herbal-compress">Compresses herbales thaï</option>
+                  <option value="deep-tissue">Tissus profonds</option>
+                  <option value="signature-fusion">Fusion signature</option>
                 </select>
               </div>
               <div className="flex flex-col gap-2">
@@ -173,7 +175,7 @@ export default function BookNow() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="px-4 py-3 rounded-xl border border-brown/15 bg-cream focus:border-gold focus:ring-2 focus:ring-gold/20 focus:ring-offset-0 focus:outline-none transition-colors resize-none"
-                  placeholder="Any special requests or notes"
+                  placeholder="Demandes particulières ou remarques"
                   disabled={formState === "loading"}
                 />
               </div>
@@ -187,7 +189,7 @@ export default function BookNow() {
                 disabled={formState === "loading"}
                 className="w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {formState === "loading" ? "Sending…" : "Send inquiry"}
+                {formState === "loading" ? "Envoi en cours…" : "Envoyer la demande"}
               </ShimmerButton>
             </form>
             </div>

@@ -23,7 +23,7 @@ export default function AboutUs() {
               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gold/5">
               <Image
                 src="/about-spa-room.webp"
-                alt="Luxury Thai spa room with warm candle lighting"
+                alt="Salle de spa thaï de luxe aux bougies"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -40,7 +40,7 @@ export default function AboutUs() {
               className="mb-8"
             >
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
-                About Us
+                À propos
               </h2>
               <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
             </motion.div>
@@ -51,7 +51,7 @@ export default function AboutUs() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
               className="text-base md:text-lg text-brown/85 leading-relaxed max-w-[65ch] mb-6"
             >
-              Thai House Massage & Spa brings the ancient art of Thai wellness to Morocco. Our space is a bridge between the serene discipline of Thai massage and the generous hospitality of Moroccan culture.
+              Thai House Massage &amp; Spa installe au Maroc l&apos;art ancestral du bien-être thaï. Notre espace fait le pont entre la discipline apaisante du massage thaï et la générosité de l&apos;hospitalité marocaine.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -60,7 +60,7 @@ export default function AboutUs() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
               className="text-base md:text-lg text-brown/85 leading-relaxed max-w-[65ch]"
             >
-              Every treatment is delivered in a calm, luxurious setting designed to restore balance. We invite you to step out of the everyday and into a world where tradition and care meet.
+              Chaque soin se déroule dans un cadre calme et luxueux pensé pour rétablir l&apos;équilibre. Nous vous invitons à sortir du quotidien et à entrer dans un univers où tradition et attention se rencontrent.
             </motion.p>
           </div>
         </div>

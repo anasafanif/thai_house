@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
-  { src: "/gallery-1.webp", alt: "Thai massage with warm candle lighting" },
-  { src: "/gallery-2.webp", alt: "Luxury Thai spa room" },
-  { src: "/gallery-3.webp", alt: "Spa oils, stones and folded towels" },
-  { src: "/gallery-4.webp", alt: "Relaxing massage treatment scene" },
-  { src: "/gallery-5.webp", alt: "Luxury wellness still life with towels and oils" },
-  { src: "/gallery-6.webp", alt: "Spa ambiance with candles and warm decor" },
+  { src: "/gallery-1.webp", alt: "Massage thaï aux bougies chaudes" },
+  { src: "/gallery-2.webp", alt: "Salle de spa thaï de luxe" },
+  { src: "/gallery-3.webp", alt: "Huiles de spa, pierres et serviettes pliées" },
+  { src: "/gallery-4.webp", alt: "Séance de massage relaxante" },
+  { src: "/gallery-5.webp", alt: "Nature morte bien-être avec serviettes et huiles" },
+  { src: "/gallery-6.webp", alt: "Ambiance spa aux bougies et décor chaleureux" },
 ];
 
 export default function Gallery() {
@@ -27,11 +27,11 @@ export default function Gallery() {
           className="mb-14"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
-            Gallery
+            Galerie
           </h2>
           <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
           <p className="text-brown/70 max-w-[55ch] mt-4">
-            A glimpse into our sanctuary.
+            Un aperçu de notre sanctuaire.
           </p>
         </motion.div>
         <motion.div

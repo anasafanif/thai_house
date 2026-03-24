@@ -17,7 +17,7 @@ function FloatingLogoInner() {
     >
       <Image
         src="/logo.png"
-        alt="Thai House Massage & Spa"
+        alt="Thai House Massage et Spa"
         width={120}
         height={120}
         className="h-24 w-24 md:h-32 md:w-32 object-contain"

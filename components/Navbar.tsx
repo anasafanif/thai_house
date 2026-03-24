@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 import ShimmerButton from "@/components/ShimmerButton";
 
 const NAV_LINKS = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
+  { href: "#hero", label: "Accueil" },
+  { href: "#about", label: "À propos" },
   { href: "#services", label: "Services" },
-  { href: "#why-us", label: "Why Us" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#book-now", label: "Book Now" },
+  { href: "#why-us", label: "Pourquoi nous" },
+  { href: "#gallery", label: "Galerie" },
+  { href: "#testimonials", label: "Témoignages" },
+  { href: "#book-now", label: "Réserver" },
 ];
 
 export default function Navbar() {
@@ -40,11 +40,11 @@ export default function Navbar() {
         <Link
           href="#hero"
           className="flex items-center gap-2 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
-          aria-label="Thai House Massage & Spa - Home"
+          aria-label="Thai House Massage & Spa - Accueil"
         >
           <Image
             src="/logo.png"
-            alt="Thai House Massage & Spa"
+            alt="Thai House Massage et Spa"
             width={48}
             height={48}
             className="h-10 w-10 md:h-12 md:w-12 object-contain"
@@ -67,7 +67,7 @@ export default function Navbar() {
           ))}
         </ul>
         <ShimmerButton href="#book-now" className="shrink-0 px-5 py-2.5 text-sm !text-brown">
-          Book Now
+          Réserver
         </ShimmerButton>
       </nav>
     </motion.header>

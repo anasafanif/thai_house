@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="#hero" className="inline-flex items-center gap-2 mb-6">
               <Image
                 src="/logo.png"
-                alt="Thai House Massage & Spa"
+                alt="Thai House Massage et Spa"
                 width={40}
                 height={40}
                 className="h-10 w-10 object-contain opacity-95"
@@ -24,7 +24,7 @@ export default function Footer() {
               <span className="font-serif text-xl font-semibold text-[#F6F1E9]">Thai House</span>
             </Link>
             <p className="text-cream/80 text-sm leading-relaxed max-w-[40ch] mb-6">
-              Massage & Spa. Where Moroccan warmth meets Thai tradition.
+              Massage &amp; Spa. Là où la chaleur marocaine rencontre la tradition thaïe.
             </p>
             <a
               href="https://www.google.com/maps/search/Kenitra,+Morocco"
@@ -39,8 +39,8 @@ export default function Footer() {
                 </svg>
               </span>
               <span>
-                <span className="block">Kenitra, Morocco</span>
-                <span className="text-cream/60 text-xs">Click for directions</span>
+                <span className="block">Kénitra, Maroc</span>
+                <span className="text-cream/60 text-xs">Cliquer pour l&apos;itinéraire</span>
               </span>
             </a>
             <div className="flex items-center gap-4 mt-6">
@@ -83,12 +83,12 @@ export default function Footer() {
           </div>
           <div className="md:col-span-3">
             <h3 className="font-serif text-sm font-semibold text-gold-light uppercase tracking-wider mb-5">
-              Quick links
+              Liens rapides
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link href="#about" className="text-cream/80 hover:text-gold-light transition-colors text-sm">
-                  About
+                  À propos
                 </Link>
               </li>
               <li>
@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#book-now" className="text-cream/80 hover:text-gold-light transition-colors text-sm">
-                  Book Now
+                  Réserver
                 </Link>
               </li>
             </ul>
@@ -108,13 +108,13 @@ export default function Footer() {
               Contact
             </h3>
             <p className="text-cream/80 text-sm leading-relaxed">
-              Reach us via the WhatsApp button or call to reserve your visit.
+              Contactez-nous via le bouton WhatsApp ou par téléphone pour réserver votre visite.
             </p>
           </div>
         </div>
         <div className="mt-16 pt-10 border-t border-cream/20 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-cream/50 text-sm">
-            Thai House Massage & Spa. All rights reserved.
+            Thai House Massage &amp; Spa. Tous droits réservés.
           </p>
         </div>
       </div>

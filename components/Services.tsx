@@ -5,34 +5,34 @@ import { LotusMotifSmall } from "@/components/ThaiPatterns";
 
 const SERVICES = [
   {
-    title: "Traditional Thai Massage",
+    title: "Massage thaï traditionnel",
     description:
-      "Ancient techniques combining acupressure and assisted stretching to release tension and restore energy flow.",
+      "Techniques ancestrales mêlant acupression et étirements assistés pour libérer les tensions et relancer la circulation de l’énergie.",
   },
   {
-    title: "Aromatherapy Massage",
+    title: "Massage à l’aromathérapie",
     description:
-      "Custom-blended essential oils paired with flowing strokes to soothe the mind and body.",
+      "Huiles essentielles sur mesure associées à des mouvements fluides pour apaiser l’esprit et le corps.",
   },
   {
-    title: "Hot Stone Therapy",
+    title: "Thérapie aux pierres chaudes",
     description:
-      "Heated basalt stones melt deep tension while promoting circulation and deep relaxation.",
+      "Des pierres de basalte chauffées dissolvent les tensions profondes tout en favorisant la circulation et une relaxation intense.",
   },
   {
-    title: "Thai Herbal Compress",
+    title: "Compresses herbales thaï",
     description:
-      "Warm compresses filled with Thai herbs to ease muscle stiffness and invigorate the senses.",
+      "Compresses tièdes garnies d’herbes thaïlandaises pour détendre les muscles et stimuler les sens.",
   },
   {
-    title: "Deep Tissue",
+    title: "Tissus profonds",
     description:
-      "Focused pressure on chronic tension areas for lasting relief and improved mobility.",
+      "Pression ciblée sur les zones de tension chronique pour un soulagement durable et une meilleure mobilité.",
   },
   {
-    title: "Signature Fusion",
+    title: "Fusion signature",
     description:
-      "Our signature blend of Thai and Moroccan techniques in one extended journey.",
+      "Notre combinaison signature des techniques thaïlandaises et marocaines en un voyage prolongé.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Services() {
           className="mb-16"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
-            Our Services
+            Nos services
           </h2>
           <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
           <motion.p
@@ -74,7 +74,7 @@ export default function Services() {
             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.05 }}
             className="text-brown/70 max-w-[55ch] mt-6"
           >
-            Six distinct experiences, each designed to restore and renew.
+            Six expériences distinctes, chacune pensée pour vous restaurer et vous régénérer.
           </motion.p>
         </motion.div>
         <motion.ul

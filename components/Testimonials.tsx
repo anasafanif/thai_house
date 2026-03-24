@@ -7,27 +7,27 @@ import Image from "next/image";
 const TESTIMONIALS = [
   {
     quote:
-      "The best massage experience I have had in Morocco. The fusion of Thai technique and the calm of the space left me completely renewed.",
+      "La meilleure expérience de massage que j’ai vécue au Maroc. La fusion des techniques thaïes et le calme des lieux m’ont complètement régénérée.",
     name: "Laila Benali",
     role: "Casablanca",
   },
   {
     quote:
-      "I come every month. The herbal compress treatment is extraordinary—authentic and deeply relaxing.",
+      "Je viens chaque mois. Le soin aux compresses herbales est extraordinaire — authentique et profondément relaxant.",
     name: "Omar Tazi",
     role: "Rabat",
   },
   {
     quote:
-      "A true sanctuary. The team is discreet, professional, and the atmosphere is exactly what you hope for from a high-end spa.",
+      "Un véritable sanctuaire. L’équipe est discrète et professionnelle, et l’ambiance est exactement celle que l’on attend d’un spa haut de gamme.",
     name: "Yasmine Idrissi",
     role: "Marrakech",
   },
   {
     quote:
-      "From the first step inside I felt I was somewhere special. The signature fusion is my favourite.",
+      "Dès le premier pas à l’intérieur, j’ai senti que j’étais quelque part d’exceptionnel. La fusion signature est mon soin préféré.",
     name: "Karim Amrani",
-    role: "Fes",
+    role: "Fès",
   },
 ];
 
@@ -54,11 +54,11 @@ export default function Testimonials() {
           className="mb-14"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
-            Testimonials
+            Témoignages
           </h2>
           <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
           <p className="text-brown/70 max-w-[55ch] mt-4">
-            What our guests say about us.
+            Ce que nos clients disent de nous.
           </p>
         </motion.div>
         <div className="relative min-h-[280px] md:min-h-[260px]">
@@ -100,7 +100,7 @@ export default function Testimonials() {
           <button
             type="button"
             onClick={prev}
-            aria-label="Previous testimonial"
+            aria-label="Témoignage précédent"
             className="w-12 h-12 rounded-full border border-brown/20 flex items-center justify-center text-brown hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -113,7 +113,7 @@ export default function Testimonials() {
                 key={i}
                 type="button"
                 onClick={() => setIndex(i)}
-                aria-label={`Go to testimonial ${i + 1}`}
+                aria-label={`Aller au témoignage ${i + 1}`}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
                   i === index ? "bg-gold scale-125" : "bg-brown/25 hover:bg-brown/40 hover:scale-110"
                 }`}
@@ -123,7 +123,7 @@ export default function Testimonials() {
           <button
             type="button"
             onClick={next}
-            aria-label="Next testimonial"
+            aria-label="Témoignage suivant"
             className="w-12 h-12 rounded-full border border-brown/20 flex items-center justify-center text-brown hover:border-gold hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold active:scale-[0.98]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

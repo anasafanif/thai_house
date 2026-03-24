@@ -19,9 +19,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Thai House Massage & Spa | Morocco",
+  title: "Thai House Massage & Spa | Maroc",
   description:
-    "Premium Thai massage and spa in Morocco. Moroccan-Thai fusion wellness in a luxury zen setting.",
+    "Massage thaï et spa haut de gamme au Maroc. Bien-être fusion maroco-thaïlandais dans un cadre zen de luxe.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="font-sans min-h-screen bg-cream antialiased" data-site-version="luxury-spa">
         <Navbar />
         <main>{children}</main>
