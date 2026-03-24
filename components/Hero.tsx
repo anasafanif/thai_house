@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0" aria-hidden>
         <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
           <Image
-            src="/hero-massage-crop.png"
+            src="/hero-massage-crop.webp"
             alt=""
             fill
             priority

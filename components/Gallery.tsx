@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
-  { src: "/gallery-1.png", alt: "Thai massage with warm candle lighting" },
-  { src: "/gallery-2.png", alt: "Luxury Thai spa room" },
-  { src: "/gallery-3.png", alt: "Spa oils, stones and folded towels" },
-  { src: "/gallery-4.png", alt: "Relaxing massage treatment scene" },
-  { src: "/gallery-5.png", alt: "Luxury wellness still life with towels and oils" },
-  { src: "/gallery-6.png", alt: "Spa ambiance with candles and warm decor" },
+  { src: "/gallery-1.webp", alt: "Thai massage with warm candle lighting" },
+  { src: "/gallery-2.webp", alt: "Luxury Thai spa room" },
+  { src: "/gallery-3.webp", alt: "Spa oils, stones and folded towels" },
+  { src: "/gallery-4.webp", alt: "Relaxing massage treatment scene" },
+  { src: "/gallery-5.webp", alt: "Luxury wellness still life with towels and oils" },
+  { src: "/gallery-6.webp", alt: "Spa ambiance with candles and warm decor" },
 ];
 
 export default function Gallery() {
