@@ -5,28 +5,36 @@ import Image from "next/image";
 
 const GALLERY_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
+    src: "/thai-house-hero.png",
+    alt: "Massage thaï traditionnel pour homme dans une ambiance boisée et chaleureuse",
+  },
+  {
+    src: "/thai-house-about.png",
     alt: "Massage thaï relaxant pour femme dans une ambiance chaleureuse",
   },
   {
-    src: "https://images.unsplash.com/photo-1607008829749-c0f284a4975b?auto=format&fit=crop&w=900&q=80",
-    alt: "Massage du dos pour homme dans un spa thaï haut de gamme",
+    src: "/service-massage.png",
+    alt: "Massage aromatique pour femme dans un spa thaï lumineux",
   },
   {
-    src: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
-    alt: "Soin de relaxation thaï pour femmes et hommes",
+    src: "/service-packs.png",
+    alt: "Massage thaï au sol pour homme avec thérapeute professionnelle",
   },
   {
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80",
-    alt: "Ambiance hammam et spa thaï avec bougies",
+    src: "/gallery-back-neck.png",
+    alt: "Soin dos et nuque pour homme dans une ambiance thaï traditionnelle",
   },
   {
-    src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
-    alt: "Rituel bien-être du visage adapté aux femmes et aux hommes",
+    src: "/gallery-herbal.png",
+    alt: "Massage aux pochons d'herbes pour femme dans un spa apaisant",
   },
   {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80",
-    alt: "Soins esthétiques pour toutes et tous dans un spa",
+    src: "/service-soins.png",
+    alt: "Réflexologie plantaire et soins adaptés aux femmes et aux hommes",
+  },
+  {
+    src: "/service-hammam.png",
+    alt: "Accueil spa thaï marocain pour toutes et tous",
   },
 ];
 

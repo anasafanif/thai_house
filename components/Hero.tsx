@@ -15,11 +15,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0" aria-hidden>
         <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
           <Image
-            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80"
-            alt="Massage thaï relaxant pour femmes et hommes dans une ambiance chaleureuse"
+            src="/thai-house-hero.png"
+            alt="Massage thaï traditionnel pour hommes et femmes dans une ambiance chaleureuse"
             fill
             priority
-            className="object-cover object-[72%_30%] min-[480px]:object-[68%_28%] lg:object-[58%_40%]"
+            className="object-cover object-[65%_38%] min-[480px]:object-[62%_38%] lg:object-[54%_45%]"
             sizes="(max-width: 1024px) 100vw, 62vw"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-brown/30 via-transparent to-transparent" />

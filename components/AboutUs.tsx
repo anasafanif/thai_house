@@ -22,7 +22,7 @@ export default function AboutUs() {
             <ThaiBorderFrame className="aspect-[4/5] rounded-2xl overflow-hidden">
               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gold/5">
               <Image
-                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
+                src="/thai-house-about.png"
                 alt="Soin spa thaï pour femmes et hommes dans un cadre luxueux"
                 fill
                 className="object-cover"

@@ -20,8 +20,7 @@ type ServiceCategory = {
 const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     title: "Massage",
-    image:
-      "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-massage.png",
     items: [
       {
         title: "Massage d'aromathérapie relaxant",
@@ -95,8 +94,7 @@ const SERVICE_CATEGORIES: ServiceCategory[] = [
   },
   {
     title: "Hammam",
-    image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-hammam.png",
     items: [
       {
         title: "Thai hammam",
@@ -107,8 +105,7 @@ const SERVICE_CATEGORIES: ServiceCategory[] = [
   },
   {
     title: "Packs",
-    image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-packs.png",
     items: [
       {
         title: "Hammam plus massage",
@@ -123,8 +120,7 @@ const SERVICE_CATEGORIES: ServiceCategory[] = [
   },
   {
     title: "Soins",
-    image:
-      "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80",
+    image: "/service-soins.png",
     items: [
       {
         title: "Manicure",
