@@ -15,11 +15,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0" aria-hidden>
         <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
           <Image
-            src="/hero-massage-crop.webp"
-            alt=""
+            src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80"
+            alt="Massage thaï relaxant pour femmes et hommes dans une ambiance chaleureuse"
             fill
             priority
-            className="object-cover object-[90%_22%] min-[480px]:object-[88%_24%] lg:object-[58%_40%]"
+            className="object-cover object-[72%_30%] min-[480px]:object-[68%_28%] lg:object-[58%_40%]"
             sizes="(max-width: 1024px) 100vw, 62vw"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-brown/30 via-transparent to-transparent" />
@@ -59,7 +59,7 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
               className="text-sm sm:text-base md:text-xl text-brown/80 max-w-[34ch] sm:max-w-[28ch] leading-relaxed mb-8 sm:mb-10"
             >
-              Découvrez le bien-être thaï traditionnel prodigué par des thérapeutes thaïlandais qualifiés dans un spa de luxe apaisant à Kénitra.
+              Découvrez le bien-être thaï traditionnel pour femmes et hommes, prodigué par des thérapeutes qualifiés dans un spa de luxe apaisant à Kénitra.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -64,7 +64,7 @@ export default function Navbar() {
             Thai House
           </span>
         </Link>
-        <ul className="hidden md:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-1">
           {NAV_LINKS.slice(1).map((link) => (
             <li key={link.href}>
               <Link
@@ -76,7 +76,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <ShimmerButton href="#services" className="hidden sm:inline-flex shrink-0 px-5 py-2.5 text-sm !text-brown">
+        <ShimmerButton href="#services" className="hidden md:inline-flex shrink-0 px-5 py-2.5 text-sm !text-brown">
           Nos soins
         </ShimmerButton>
         <button
@@ -84,7 +84,7 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen((open) => !open)}
           aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={mobileMenuOpen}
-          className="md:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gold/35 text-cream hover:text-gold-light hover:border-gold/60 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          className="lg:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gold/35 text-cream hover:text-gold-light hover:border-gold/60 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         >
           {mobileMenuOpen ? (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -98,7 +98,7 @@ export default function Navbar() {
         </button>
       </nav>
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-gold/20 bg-brown/95 backdrop-blur-md px-4 sm:px-6 py-4">
+        <div className="lg:hidden border-t border-gold/20 bg-brown/95 backdrop-blur-md px-4 sm:px-6 py-4">
           <ul className="space-y-2">
             {NAV_LINKS.slice(1).map((link) => (
               <li key={link.href}>

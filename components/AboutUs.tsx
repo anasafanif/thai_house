@@ -22,8 +22,8 @@ export default function AboutUs() {
             <ThaiBorderFrame className="aspect-[4/5] rounded-2xl overflow-hidden">
               <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gold/5">
               <Image
-                src="/about-spa-room.webp"
-                alt="Salle de spa thaï de luxe aux bougies"
+                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80"
+                alt="Soin spa thaï pour femmes et hommes dans un cadre luxueux"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -60,7 +60,7 @@ export default function AboutUs() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
               className="text-base md:text-lg text-brown/85 leading-relaxed max-w-[65ch]"
             >
-              Chaque soin se déroule dans un cadre calme et luxueux pensé pour rétablir l&apos;équilibre. Nous vous invitons à sortir du quotidien et à entrer dans un univers où tradition et attention se rencontrent.
+              Chaque soin se déroule dans un cadre calme et luxueux pensé pour rétablir l&apos;équilibre. Nos rituels s&apos;adressent à toutes et tous, femmes et hommes, dans un univers où tradition et attention se rencontrent.
             </motion.p>
           </div>
         </div>

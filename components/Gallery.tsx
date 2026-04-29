@@ -4,12 +4,30 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
-  { src: "/gallery-1.webp", alt: "Massage thaï aux bougies chaudes" },
-  { src: "/gallery-2.webp", alt: "Salle de spa thaï de luxe" },
-  { src: "/gallery-3.webp", alt: "Huiles de spa, pierres et serviettes pliées" },
-  { src: "/gallery-4.webp", alt: "Séance de massage relaxante" },
-  { src: "/gallery-5.webp", alt: "Nature morte bien-être avec serviettes et huiles" },
-  { src: "/gallery-6.webp", alt: "Ambiance spa aux bougies et décor chaleureux" },
+  {
+    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
+    alt: "Massage thaï relaxant pour femme dans une ambiance chaleureuse",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1607008829749-c0f284a4975b?auto=format&fit=crop&w=900&q=80",
+    alt: "Massage du dos pour homme dans un spa thaï haut de gamme",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
+    alt: "Soin de relaxation thaï pour femmes et hommes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80",
+    alt: "Ambiance hammam et spa thaï avec bougies",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
+    alt: "Rituel bien-être du visage adapté aux femmes et aux hommes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80",
+    alt: "Soins esthétiques pour toutes et tous dans un spa",
+  },
 ];
 
 export default function Gallery() {
@@ -24,14 +42,14 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="mb-10 sm:mb-14"
+          className="mb-8 sm:mb-14"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
             Galerie
           </h2>
           <div className="h-px w-20 bg-gold rounded-full" aria-hidden />
           <p className="text-brown/70 max-w-[55ch] mt-4">
-            Un aperçu de notre sanctuaire.
+            Un aperçu de notre sanctuaire, avec des soins pensés pour femmes et hommes.
           </p>
         </motion.div>
         <motion.div
@@ -39,7 +57,7 @@ export default function Gallery() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
+          className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 space-y-4 sm:space-y-6"
         >
           {GALLERY_IMAGES.map((img, i) => (
             <motion.div
@@ -48,9 +66,9 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.05 }}
-              className="break-inside-avoid mb-6 relative group"
+              className="break-inside-avoid mb-4 sm:mb-6 relative group"
             >
-              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] min-h-[200px] shadow-card hover:shadow-cardHover transition-shadow duration-300">
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] min-h-[190px] shadow-card hover:shadow-cardHover transition-shadow duration-300">
                 <Image
                   src={img.src}
                   alt={img.alt}
