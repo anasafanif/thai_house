@@ -28,7 +28,7 @@ const ShimmerButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, ShimmerB
     );
     const shimmerLayer = (
       <span
-        className="absolute inset-0 z-0 bg-no-repeat opacity-70 bg-[length:200%_100%] animate-shimmer"
+        className="absolute inset-0 z-0 bg-no-repeat opacity-70 bg-[length:200%_100%] animate-shimmer pointer-events-none"
         style={{ backgroundImage: shimmerBg }}
         aria-hidden
       />
@@ -42,13 +42,13 @@ const ShimmerButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, ShimmerB
           className={`${base} ${className}`}
           ref={ref as React.Ref<HTMLAnchorElement>}
         >
+          {shimmerLayer}
           <motion.span
-            className="block relative"
+            className="block relative w-full h-full"
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
           >
-            {shimmerLayer}
             {content}
           </motion.span>
         </Link>
@@ -67,7 +67,7 @@ const ShimmerButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, ShimmerB
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         {shimmerLayer}
-        {content}
+        <span className="relative z-10 block w-full h-full">{content}</span>
       </motion.button>
     );
   }

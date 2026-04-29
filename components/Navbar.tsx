@@ -76,7 +76,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <ShimmerButton href="#services" className="hidden md:inline-flex shrink-0 px-5 py-2.5 text-sm !text-brown">
+        <ShimmerButton href="#services" className="hidden md:inline-flex shrink-0 px-5 py-2.5 text-sm !bg-transparent !border !border-gold/60 !text-cream shadow-none hover:!bg-cream/10">
           Nos soins
         </ShimmerButton>
         <button
@@ -112,7 +112,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <ShimmerButton href="#services" onClick={closeMobileMenu} className="mt-4 w-full justify-center !text-brown">
+          <ShimmerButton href="#services" onClick={closeMobileMenu} className="mt-4 w-full justify-center !bg-transparent !border !border-gold/60 !text-cream shadow-none hover:!bg-cream/10">
             Nos soins
           </ShimmerButton>
         </div>

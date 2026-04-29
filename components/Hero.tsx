@@ -13,13 +13,13 @@ export default function Hero() {
       className="relative min-h-[100dvh] sm:min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-brown"
     >
       <div className="absolute inset-0 z-0" aria-hidden>
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
+        <div className="absolute top-16 bottom-0 right-0 w-full md:top-20 lg:inset-y-0 lg:w-[62%]">
           <Image
             src="/thai-house-hero.png"
             alt="Massage thaï traditionnel pour hommes et femmes dans une ambiance chaleureuse"
             fill
             priority
-            className="object-cover object-[65%_38%] min-[480px]:object-[62%_38%] lg:object-[54%_45%]"
+            className="object-cover object-[52%_78%] min-[480px]:object-[52%_74%] lg:object-[54%_45%]"
             sizes="(max-width: 1024px) 100vw, 62vw"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-brown/30 via-transparent to-transparent" />
@@ -67,12 +67,12 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
               className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4"
             >
-              <ShimmerButton href="#services" className="w-full sm:w-auto text-center !px-6 sm:!px-9 !py-3.5 sm:!py-4 text-sm sm:text-base">
+              <ShimmerButton href="#services" className="w-full sm:w-auto text-center !px-6 sm:!px-9 !py-3.5 sm:!py-4 text-sm sm:text-base !bg-transparent !border !border-brown/55 !text-brown shadow-none hover:!bg-cream/20">
                 Découvrir nos soins
               </ShimmerButton>
               <Link
                 href="#services"
-                className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl border border-gold/60 bg-cream/65 px-6 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-brown shadow-[0_10px_24px_-14px_rgba(31,26,23,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/80 hover:shadow-[0_14px_30px_-12px_rgba(31,26,23,0.35)]"
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl border border-brown/55 bg-transparent px-6 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-brown transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/20"
               >
                 Voir les soins
               </Link>
