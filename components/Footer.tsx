@@ -97,8 +97,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#book-now" className="text-cream/80 hover:text-gold-light transition-colors text-sm">
-                  Réserver
+                <Link href="#gallery" className="text-cream/80 hover:text-gold-light transition-colors text-sm">
+                  Galerie
                 </Link>
               </li>
             </ul>

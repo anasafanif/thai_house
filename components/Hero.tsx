@@ -67,8 +67,8 @@ export default function Hero() {
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
               className="flex flex-wrap gap-4"
             >
-              <ShimmerButton href="#book-now" className="!px-9 !py-4 text-base">
-                Réservez votre expérience
+              <ShimmerButton href="#services" className="!px-9 !py-4 text-base">
+                Découvrir nos soins
               </ShimmerButton>
               <Link
                 href="#services"

@@ -13,7 +13,6 @@ const NAV_LINKS = [
   { href: "#why-us", label: "Pourquoi nous" },
   { href: "#gallery", label: "Galerie" },
   { href: "#testimonials", label: "Témoignages" },
-  { href: "#book-now", label: "Réserver" },
 ];
 
 export default function Navbar() {
@@ -66,8 +65,8 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <ShimmerButton href="#book-now" className="shrink-0 px-5 py-2.5 text-sm !text-brown">
-          Réserver
+        <ShimmerButton href="#services" className="shrink-0 px-5 py-2.5 text-sm !text-brown">
+          Nos soins
         </ShimmerButton>
       </nav>
     </motion.header>
