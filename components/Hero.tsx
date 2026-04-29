@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-brown"
+      className="relative min-h-[100dvh] sm:min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-brown"
     >
       <div className="absolute inset-0 z-0" aria-hidden>
         <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
@@ -31,7 +31,7 @@ export default function Hero() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center min-h-[100dvh]">
-          <div className="lg:col-span-6 pt-28 pb-16 lg:pt-32 lg:pb-20">
+          <div className="lg:col-span-6 pt-24 sm:pt-28 pb-14 sm:pb-16 lg:pt-32 lg:pb-20">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
-              className="font-serif text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] tracking-[-0.03em] text-brown max-w-[18ch] mb-6"
+              className="font-serif text-[clamp(2.2rem,10vw,5.4rem)] leading-[0.95] tracking-[-0.03em] text-brown max-w-[18ch] mb-5 sm:mb-6"
             >
               Massage thaï authentique &amp; spa
             </motion.h1>
@@ -57,7 +57,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
-              className="text-base md:text-xl text-brown/80 max-w-[28ch] leading-relaxed mb-10"
+              className="text-sm sm:text-base md:text-xl text-brown/80 max-w-[34ch] sm:max-w-[28ch] leading-relaxed mb-8 sm:mb-10"
             >
               Découvrez le bien-être thaï traditionnel prodigué par des thérapeutes thaïlandais qualifiés dans un spa de luxe apaisant à Kénitra.
             </motion.p>
@@ -65,14 +65,14 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4"
             >
-              <ShimmerButton href="#services" className="!px-9 !py-4 text-base">
+              <ShimmerButton href="#services" className="w-full sm:w-auto text-center !px-6 sm:!px-9 !py-3.5 sm:!py-4 text-sm sm:text-base">
                 Découvrir nos soins
               </ShimmerButton>
               <Link
                 href="#services"
-                className="inline-flex items-center justify-center rounded-xl border border-gold/60 bg-cream/65 px-9 py-4 text-base font-medium text-brown shadow-[0_10px_24px_-14px_rgba(31,26,23,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/80 hover:shadow-[0_14px_30px_-12px_rgba(31,26,23,0.35)]"
+                className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl border border-gold/60 bg-cream/65 px-6 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-brown shadow-[0_10px_24px_-14px_rgba(31,26,23,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/80 hover:shadow-[0_14px_30px_-12px_rgba(31,26,23,0.35)]"
               >
                 Voir les soins
               </Link>

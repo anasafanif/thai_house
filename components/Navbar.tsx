@@ -17,12 +17,22 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
     <motion.header
@@ -35,9 +45,10 @@ export default function Navbar() {
           : "bg-brown/90 backdrop-blur-sm border-b border-gold/20"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between gap-3">
         <Link
           href="#hero"
+          onClick={closeMobileMenu}
           className="flex items-center gap-2 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
           aria-label="Thai House Massage & Spa - Accueil"
         >
@@ -65,10 +76,47 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <ShimmerButton href="#services" className="shrink-0 px-5 py-2.5 text-sm !text-brown">
+        <ShimmerButton href="#services" className="hidden sm:inline-flex shrink-0 px-5 py-2.5 text-sm !text-brown">
           Nos soins
         </ShimmerButton>
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+          aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={mobileMenuOpen}
+          className="md:hidden shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg border border-gold/35 text-cream hover:text-gold-light hover:border-gold/60 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+        >
+          {mobileMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+              <path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.42L10.59 13.4l-6.3 6.31-1.42-1.42L9.17 12 2.87 5.71 4.29 4.3l6.3 6.29 6.29-6.3z" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+              <path d="M4 7h16v2H4zm0 4h16v2H4zm0 4h16v2H4z" />
+            </svg>
+          )}
+        </button>
       </nav>
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-gold/20 bg-brown/95 backdrop-blur-md px-4 sm:px-6 py-4">
+          <ul className="space-y-2">
+            {NAV_LINKS.slice(1).map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={closeMobileMenu}
+                  className="block rounded-lg px-3 py-2.5 text-sm text-cream/95 hover:text-gold-light hover:bg-cream/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ShimmerButton href="#services" onClick={closeMobileMenu} className="mt-4 w-full justify-center !text-brown">
+            Nos soins
+          </ShimmerButton>
+        </div>
+      )}
     </motion.header>
   );
 }

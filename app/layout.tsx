@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: "Thai House Massage & Spa | Maroc",
   description:
     "Massage thaï et spa haut de gamme au Maroc. Bien-être fusion maroco-thaïlandais dans un cadre zen de luxe.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

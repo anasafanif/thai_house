@@ -16,7 +16,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
+      className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.div
@@ -24,7 +24,7 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="mb-14"
+          className="mb-10 sm:mb-14"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
             Galerie

@@ -8,7 +8,7 @@ export default function AboutUs() {
   return (
     <section
       id="about"
-      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
+      className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-14 md:gap-20 items-center">

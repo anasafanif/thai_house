@@ -43,7 +43,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
+      className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-beige overflow-hidden"
     >
       <div className="relative z-10 max-w-4xl mx-auto">
         <motion.div
@@ -61,7 +61,7 @@ export default function Testimonials() {
             Ce que nos clients disent de nous.
           </p>
         </motion.div>
-        <div className="relative min-h-[280px] md:min-h-[260px]">
+        <div className="relative min-h-[340px] sm:min-h-[280px] md:min-h-[260px]">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={index}
@@ -71,8 +71,8 @@ export default function Testimonials() {
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               className="absolute inset-0"
             >
-              <blockquote className="bg-white/90 border border-gold/25 rounded-2xl p-8 md:p-10 shadow-card">
-                <p className="font-serif text-xl md:text-2xl text-brown leading-relaxed mb-8">
+              <blockquote className="bg-white/90 border border-gold/25 rounded-2xl p-6 sm:p-8 md:p-10 shadow-card">
+                <p className="font-serif text-lg sm:text-xl md:text-2xl text-brown leading-relaxed mb-8">
                   &ldquo;{TESTIMONIALS[index].quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4">

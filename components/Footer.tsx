@@ -4,7 +4,7 @@ import { ThaiBorderLine } from "@/components/ThaiPatterns";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-brown text-[#F6F1E9] py-20 px-4 sm:px-6 lg:px-8 border-t border-gold/30">
+    <footer className="relative bg-brown text-[#F6F1E9] py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-gold/30">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center pt-2 pb-12">
           <div className="text-gold/60 w-48 h-5">
@@ -43,7 +43,7 @@ export default function Footer() {
                 <span className="text-cream/60 text-xs">Cliquer pour l&apos;itinéraire</span>
               </span>
             </a>
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex flex-wrap items-center gap-4 mt-6">
               <a
                 href="#"
                 target="_blank"

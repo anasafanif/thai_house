@@ -22,7 +22,7 @@ export default function WhyUs() {
   return (
     <section
       id="why-us"
-      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
+      className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-24">
@@ -47,7 +47,7 @@ export default function WhyUs() {
               Au Maroc, l’hospitalité est un art. En Thaïlande, le massage est une science séculaire. Chez Thai House, nous honorons les deux : un lieu où l’on vous accueille comme en famille et où l’on prend soin de vous avec un savoir-faire ancestral.
             </p>
           </motion.div>
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             {POINTS.map((point, i) => (
               <motion.div
                 key={point.title}
@@ -55,7 +55,7 @@ export default function WhyUs() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.06 }}
-                className="flex gap-6"
+                className="flex gap-4 sm:gap-6"
               >
                 <div className="shrink-0 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center">
                   <span className="font-serif text-gold font-semibold">{i + 1}</span>

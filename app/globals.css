@@ -16,11 +16,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   @apply bg-cream text-brown antialiased;
   font-feature-settings: "kern" 1, "liga" 1;
+  overflow-x: clip;
 }
 
 @layer utilities {

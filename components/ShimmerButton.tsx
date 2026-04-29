@@ -36,7 +36,12 @@ const ShimmerButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, ShimmerB
 
     if (href) {
       return (
-        <Link href={href} className={`${base} ${className}`} ref={ref as React.Ref<HTMLAnchorElement>}>
+        <Link
+          href={href}
+          onClick={onClick}
+          className={`${base} ${className}`}
+          ref={ref as React.Ref<HTMLAnchorElement>}
+        >
           <motion.span
             className="block relative"
             whileHover={{ scale: 1.01 }}

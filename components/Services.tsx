@@ -53,7 +53,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
+      className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-cream overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.div
@@ -61,7 +61,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brown tracking-tight mb-3">
             Nos services
@@ -82,7 +82,7 @@ export default function Services() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8"
         >
           {SERVICES.map((service, index) => (
             <motion.li
