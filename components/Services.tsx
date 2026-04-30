@@ -111,7 +111,7 @@ const SERVICE_CATEGORIES: ServiceCategory[] = [
         title: "Hammam plus massage",
         price: "Formules",
         details: [
-          "30min hammam + 30min massage - 400dh",
+          "1h hammam + 30min massage - 400dh",
           "1h hammam + 1h massage - 550dh",
           "1h hammam + 1h30 massage - 650dh",
         ],
