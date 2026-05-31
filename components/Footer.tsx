@@ -27,7 +27,7 @@ export default function Footer() {
               Massage &amp; Spa. Là où la chaleur marocaine rencontre la tradition thaïe.
             </p>
             <a
-              href="https://www.google.com/maps/search/Kenitra,+Morocco"
+              href="https://maps.app.goo.gl/gCNbwiZ9LjbhBr1b8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-start gap-2 text-cream/80 hover:text-gold-light transition-colors text-sm group"
@@ -45,7 +45,7 @@ export default function Footer() {
             </a>
             <div className="flex flex-wrap items-center gap-4 mt-6">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1BDKL7Wggg/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -56,7 +56,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/thai_housemassage?igsh=NWV5dWYxcjZzeTB4&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -66,17 +66,6 @@ export default function Footer() {
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="text-cream/70 hover:text-gold-light transition-colors p-1"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                 </svg>
               </a>
             </div>

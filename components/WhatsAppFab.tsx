@@ -2,16 +2,12 @@
 
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "212600000000";
-const PRE_FILL_MESSAGE =
-  "Bonjour, je souhaite réserver un soin chez Thai House Massage & Spa.";
-
-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(PRE_FILL_MESSAGE)}`;
+const WHATSAPP_URL = "https://wa.me/message/G2LSKGOQ6KZ6K1";
 
 export default function WhatsAppFab() {
   return (
     <motion.a
-      href={whatsappUrl}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Nous contacter sur WhatsApp"
